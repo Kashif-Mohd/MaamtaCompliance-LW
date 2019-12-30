@@ -1,0 +1,346 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="ComplianceMaamtaLW.Main" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>CORE DSS</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css" />
+    <link id="Link1" runat="server" rel="icon" href="~/img/green-01.png" type="image/png" />
+    <link href="css/custom.css" rel="stylesheet" />
+
+    <script src="//use.edgefonts.net/bebas-neue.js"></script>
+
+    <!-- Custom Fonts & Icons -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600,800' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="css/icomoon-social.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-footable/0.1.0/css/footable.min.css"
+        rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-footable/0.1.0/js/footable.min.js"></script>
+
+    <script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+
+    <style>
+
+        .txtboxxx {
+            color: black;
+            /*font-family: 'Times New Roman';*/
+            text-transform: uppercase;
+            padding: 8px;
+            border-radius: 5px;
+            border: 2px solid #00b894;
+        }
+
+
+
+
+        /* For Web Browser*/
+
+        @media only screen and (min-width: 40em) {
+            .CSSUserName {
+                color: black;
+                margin-left: 12%;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+        }
+        /* For Mobile Browser*/
+        @media only screen and (max-width: 40em) {
+            .CSSUserName {
+                color: white;
+                margin-left: 5%;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+        }
+
+
+
+        .Background {
+            background-color: Black;
+            filter: alpha(opacity=90);
+            opacity: 0.8;
+        }
+
+        .Popup {
+            background-color: #FFFFFF;
+            border-width: 3px;
+            border-style: solid;
+            border-color: black;
+            padding-top: 10px;
+            padding-left: 10px;
+            width: 400px;
+            height: 350px;
+        }
+
+        .form {
+            position: relative;
+            z-index: 1;
+            background: rgba(0, 0, 0, 0.2);
+            max-width: 660px;
+            margin: 0;
+            /*padding: 0px;*/
+            text-align: center;
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+        }
+
+        .input {
+            width: 360px;
+            margin: auto;
+            height: 450px;
+            /*padding: 3% 0 0;*/
+        }
+
+        .thStyle {
+            height: 60px;
+            width: 100%;
+            font-family: Calibri;
+            font-size: 20px;
+            color: #1b2d3d;
+        }
+
+        .tdStyle {
+            padding-left: 15px;
+        }
+
+        .tdText {
+            /* background-color:#e3eeff;*/
+            color: black;
+        }
+
+        .txtbxRd {
+            /*border-radius: 5px;
+            border: 2px solid #6BB9F0;
+            padding: 0px;
+            height: 31px;*/
+        }
+
+
+
+
+
+
+        .mycheckbox input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        .CalendarCSS {
+            /*background-color: red;
+            color: Snow;
+            border: solid 1px red;*/
+        }
+
+        .ajax__calendar_days {
+            background-color: #55efc4;
+            color: White;
+        }
+
+        .ajax__calendar_day {
+            background-color: #00b894;
+            font-family: Courier;
+        }
+
+        .ajax__calendar_header {
+            background-color: #34495E;
+            color: white;
+        }
+
+        .calanderButton {
+            margin-left: -34px;
+            margin-bottom: -9px;
+            height: 28px;
+            width: 30px;
+            margin-top: 5px;
+        }
+    </style>
+    <script type="text/javascript">
+
+
+
+        function onlyAlphabets(evt) {
+            var charCode;
+            if (window.event)
+                charCode = window.event.keyCode;  //for IE
+            else
+                charCode = evt.which;  //for firefox
+            if (charCode == 32) //for &lt;space&gt; symbol
+                return true;
+            if (charCode > 31 && charCode < 65) //for characters before 'A' in ASCII Table
+                return false;
+            if (charCode > 90 && charCode < 97) //for characters between 'Z' and 'a' in ASCII Table
+                return false;
+            if (charCode > 122) //for characters beyond 'z' in ASCII Table
+                return false;
+            return true;
+        }
+        function lettersOnly() {
+            var charCode = event.keyCode;
+
+            if ((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123) || charCode == 8)
+
+                return true;
+            else
+                return false;
+        }
+
+        function OnlyNumeric(evt) {
+            var theEvent = evt || window.event;
+            var key = theEvent.keyCode || theEvent.which;
+            key = String.fromCharCode(key);
+            var regex = /[0-9]/;
+            if (!regex.test(key)) {
+                theEvent.returnValue = false;
+                if (theEvent.preventDefault) theEvent.preventDefault();
+            }
+        }
+    </script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManger1" runat="Server"></asp:ScriptManager>
+        <div>
+            <header class="navbar navbar-inverse navbar-fixed-top" role="banner">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">
+                            <img src="img/vppt.png" />
+                        </a>
+                    </div>
+
+                    <div class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav navbar-right">
+
+                            <%--  <li runat="server" id="dashEmptySachet"><a href="dashEmptySachet.aspx">Dashboard</a></li>--%>
+
+
+                            <li class="dropdown" runat="server" id="Dashboard">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dashboard <i class="icon-angle-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li runat="server" id="dashEmptySachet"><a href="dashEmptySachet.aspx">Empty Sachet</a></li>
+                                    <li runat="server" id="dashCrf11"><a href="dashPhysician.aspx">Physician Form</a></li>
+                                    <li runat="server" id="dashCrf8"><a href="dashAdverseEvent.aspx">Adverse Event (CRF8)</a></li>
+                                    <li runat="server" id="ReportCRF8"><a href="ReportCRF8.aspx">Report- Adverse Event (CRF8)</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown" runat="server" id="FieldWorker" visible="false">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Search Forms <i class="icon-angle-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li runat="server" id="showcrf1"><a href="showcrf1.aspx">Screening--CRF-1</a></li>
+                                    <li runat="server" id="showcrf2"><a href="showcrf2.aspx">Eligibility--CRF-2</a></li>
+                                    <li runat="server" id="showcrf6"><a href="showcrf6.aspx">Anthro--CRF-6</a></li>
+                                    <li runat="server" id="chWeight"><a href="chWeight.aspx">Child Weight</a></li>
+                                    <li runat="server" id="coredss"><a href="coredss.aspx">CORE DSS</a></li>
+                                    <li runat="server" id="Register_CoreDSS"><a href="Register_CoreDSS.aspx">Register New MW</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown" runat="server" id="Compliance">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Compliance <i class="icon-angle-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li runat="server" id="searchdss"><a href="searchdss.aspx">Search DSSID</a></li>
+                                    <li runat="server" id="searchfollowups"><a href="searchfollowups.aspx">Search Followups</a></li>
+                                    <li runat="server" id="entryEmptySachet"><a href="entryEmptySachet.aspx">Entry Empty Sachet</a></li>
+                                </ul>
+                            </li>
+
+
+
+                            <li class="dropdown" runat="server" id="EntryForms">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Entry Forms <i class="icon-angle-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li runat="server" id="crf8"><a href="crf8a.aspx">Entry CRF-8</a></li>
+                                    <li runat="server" id="crf11"><a href="crf11a.aspx">Entry CRF-11</a></li>
+                                </ul>
+                            </li>
+
+
+                            <li class="dropdown" runat="server" id="Setting">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Settings <i class="icon-angle-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <li><a href="#" id=""></a></li>
+                                        <asp:Label ID="lbeUserName" runat="server" CssClass="CSSUserName"></asp:Label></li>
+                                    <li class="divider"></li>
+                                    <li><a href="login.aspx">Log Out</a></li>
+                                </ul>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            <!--/header-->
+
+            <asp:Panel ID="pnl1" runat="server" CssClass="form" align="Center" Style="display: none">
+                <iframe id="irm1" class="input" frameborder="0" scrolling="no" src="#" runat="server"></iframe>
+                <br />
+                <button id="Button2" runat="server">Close</button>
+            </asp:Panel>
+
+
+
+
+
+
+            <div class="section" style="margin-top: 40px">
+
+
+
+
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+
+
+            </div>
+        </div>
+        <!-- End Our Clients -->
+
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+            <!-- Footer -->
+        </asp:ContentPlaceHolder>
+
+
+        <!-- Javascripts -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/jquery-1.9.1.min.js"><\/script>')</script>
+        <script src="js/bootstrap.min.js"></script>
+
+        <!-- Scrolling Nav JavaScript -->
+        <script src="js/jquery.easing.min.js"></script>
+        <script src="js/scrolling-nav.js"></script>
+
+    </form>
+</body>
+</html>
