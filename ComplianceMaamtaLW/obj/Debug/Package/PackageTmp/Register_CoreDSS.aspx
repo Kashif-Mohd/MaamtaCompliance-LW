@@ -181,12 +181,12 @@
                 document.getElementById("txtHusbandNm").focus();
                 return false;
             }
-            else if (document.getElementById("txtDOR").value == '' && document.getElementById("txtAge").value != '') {
+            else if (document.getElementById("txtDOR").value == '' || document.getElementById("txtDOR").value == '__-__-____') {
                 alert("Enter Date of Registration in MWSR!")
                 document.getElementById("txtDOR").focus();
                 return false;
             }
-            else if (document.getElementById("txtDOR").value != '' && (document.getElementById("txtAge").value == '' || document.getElementById("txtAge").value.length < 2)) {
+            else if (document.getElementById("txtAge").value == '' || document.getElementById("txtAge").value.length < 2) {
                 alert("Enter Age 2 digit long!")
                 document.getElementById("txtAge").focus();
                 return false;

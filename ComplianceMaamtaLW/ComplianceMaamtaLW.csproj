@@ -226,6 +226,7 @@
     <Content Include="updatecrf8b.aspx" />
     <Content Include="updatecrf8c.aspx" />
     <Content Include="updatecrf8d.aspx" />
+    <Content Include="Update_CoreDSS.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -455,6 +456,13 @@
     </Compile>
     <Compile Include="updatecrf8d.aspx.designer.cs">
       <DependentUpon>updatecrf8d.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Update_CoreDSS.aspx.cs">
+      <DependentUpon>Update_CoreDSS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Update_CoreDSS.aspx.designer.cs">
+      <DependentUpon>Update_CoreDSS.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

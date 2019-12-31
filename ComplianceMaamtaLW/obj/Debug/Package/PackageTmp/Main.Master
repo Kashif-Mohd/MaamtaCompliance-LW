@@ -261,6 +261,7 @@
                                     <li runat="server" id="chWeight"><a href="chWeight.aspx">Child Weight</a></li>
                                     <li runat="server" id="coredss"><a href="coredss.aspx">CORE DSS</a></li>
                                     <li runat="server" id="Register_CoreDSS"><a href="Register_CoreDSS.aspx">Register New MW</a></li>
+                                    <li runat="server" id="Update_CoreDSS"><a href="Update_CoreDSS.aspx">Update CORE DSS</a></li>
                                 </ul>
                             </li>
 

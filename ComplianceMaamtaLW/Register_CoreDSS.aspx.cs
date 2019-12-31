@@ -166,7 +166,6 @@ namespace ComplianceMaamtaLW
 
             try
             {
-
                 string currentdate = DateTime.Now.ToString("dd-MM-yyyy");
 
                 if (txtDOR.Text != "" && DateTime.ParseExact(txtDOR.Text, "dd-MM-yyyy", CultureInfo.InvariantCulture) > (DateTime.ParseExact(currentdate, "dd-MM-yyyy", CultureInfo.InvariantCulture)))
@@ -189,29 +188,18 @@ namespace ComplianceMaamtaLW
                     if (StatusCheckSQL() == false)
                     {
                         SQL_Connection.Open();
-                        SqlCommand cmd = new SqlCommand("insert into core_dss (dssid,woman_name,husband_name,age,dob,Remarks,status,entry_date,entry_name) values ('" + DSSID + "','" + txtWomanNm.Text.ToUpper() + "','" + txtHusbandNm.Text.ToUpper() + "','"+txtAge.Text+"','" + DOB + "' ,'" + txtremarks.InnerText + "' ,'1','" + DateTime.Now.ToString("dd-MM-yyyy hh:mm tt", CultureInfo.InvariantCulture) + "','" + Convert.ToString(Session["ComplianceMaamtaLW"]) + "')", SQL_Connection);
+                        SqlCommand cmd = new SqlCommand("insert into core_dss (dssid,woman_name,husband_name,age,dob,Remarks,status,entry_date,entry_name) values ('" + DSSID + "','" + txtWomanNm.Text.ToUpper() + "','" + txtHusbandNm.Text.ToUpper() + "','" + txtAge.Text + "','" + DOB + "' ,'" + txtremarks.InnerText + "' ,'1','" + DateTime.Now.ToString("dd-MM-yyyy hh:mm tt", CultureInfo.InvariantCulture) + "','" + Convert.ToString(Session["ComplianceMaamtaLW"]) + "')", SQL_Connection);
                         cmd.ExecuteNonQuery();
                         SQL_Connection.Close();
 
                     }
 
-                    // CoreDSS MySQL:
+                    // Married_Woman  MySQL:
                     if (StatusCheckMySQL() == false && txtSite.Text == "RG")
                     {
                         MySQL_Connection.Open();
-
-                        //DOB is exist
-                        if (txtDOR.Text == "")
-                        {
-                            MySqlCommand cmd = new MySqlCommand("insert into married_woman (site,para,block,structure,house_hold,woman_number,name,husband_name) values ('" + txtSite.Text.ToUpper() + "','" + dd_ParaList.Text.ToUpper() + "','" + txtBlock.Text + "','" + txtStruct.Text + "','" + txtHH.Text.ToUpper() + "','" + txtWomanNumber.Text + "','" + txtWomanNm.Text.ToUpper() + "','" + txtHusbandNm.Text.ToUpper() + "')", MySQL_Connection);
-                            cmd.ExecuteNonQuery();
-                        }
-                        //DOB does not exist
-                        else
-                        {
-                            MySqlCommand cmd = new MySqlCommand("insert into married_woman (site,para,block,structure,house_hold,woman_number,name,husband_name,age,dob) values ('" + txtSite.Text.ToUpper() + "','" + dd_ParaList.Text.ToUpper() + "','" + txtBlock.Text + "','" + txtStruct.Text + "','" + txtHH.Text.ToUpper() + "','" + txtWomanNumber.Text + "','" + txtWomanNm.Text.ToUpper() + "','" + txtHusbandNm.Text.ToUpper() + "','" + txtAge.Text + "','" + DOB + "')", MySQL_Connection);
-                            cmd.ExecuteNonQuery();
-                        }
+                        MySqlCommand cmd = new MySqlCommand("insert into married_woman (site,para,block,structure,house_hold,woman_number,name,husband_name,age,dob) values ('" + txtSite.Text.ToUpper() + "','" + dd_ParaList.Text.ToUpper() + "','" + txtBlock.Text + "','" + txtStruct.Text + "','" + txtHH.Text.ToUpper() + "','" + txtWomanNumber.Text + "','" + txtWomanNm.Text.ToUpper() + "','" + txtHusbandNm.Text.ToUpper() + "','" + txtAge.Text + "','" + DOB + "')", MySQL_Connection);
+                        cmd.ExecuteNonQuery();
                         MySQL_Connection.Close();
                     }
 
@@ -235,13 +223,13 @@ namespace ComplianceMaamtaLW
             finally
             {
                 SQL_Connection.Close();
-                MySQL_Connection.Close();               
+                MySQL_Connection.Close();
             }
 
         }
 
 
-        public void ClearTextBox() 
+        public void ClearTextBox()
         {
             dd_ParaList.Items.Clear();
             ParaList();
@@ -253,7 +241,7 @@ namespace ComplianceMaamtaLW
             txtHusbandNm.Text = "";
             txtAge.Text = "";
             txtremarks.InnerText = "";
-        } 
+        }
 
     }
 }

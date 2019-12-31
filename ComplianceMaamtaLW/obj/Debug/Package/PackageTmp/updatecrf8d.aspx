@@ -377,10 +377,10 @@
             <tr class="trCSS">
                 <td class="TableColumn tdCSS">Q47. SAE characteristics or diagnosis by study physician or key danger sign/s or details from medical record</td>
                 <td class="Space tdCSS">
-                    <asp:TextBox CssClass="form-control input-lg" ID="txtq4701" ClientIDMode="Static" onkeypress="return OnlyNumeric(event)" type="text" Font-Size="Medium" Height="2.1em" placeholder="code" MaxLength="2" runat="server"></asp:TextBox>
-                    <asp:TextBox CssClass="form-control input-lg" ID="txtq4702" ClientIDMode="Static" onkeypress="return OnlyNumeric(event)" type="text" Font-Size="Medium" Height="2.1em" placeholder="code" MaxLength="2" runat="server"></asp:TextBox>
-                    <asp:TextBox CssClass="form-control input-lg" ID="txtq4703" ClientIDMode="Static" onkeypress="return OnlyNumeric(event)" type="text" Font-Size="Medium" Height="2.1em" placeholder="code" MaxLength="2" runat="server"></asp:TextBox>
-                    <asp:TextBox CssClass="form-control input-lg" ID="txtq4704" ClientIDMode="Static" onkeypress="return OnlyNumeric(event)" type="text" Font-Size="Medium" Height="2.1em" placeholder="code" MaxLength="2" runat="server"></asp:TextBox>
+                    <asp:TextBox CssClass="form-control input-lg" ID="txtq4701" ClientIDMode="Static" onkeypress="return OnlyNumeric(event)" type="text" Font-Size="Medium" Height="2.1em" placeholder="code" MaxLength="3" runat="server"></asp:TextBox>
+                    <asp:TextBox CssClass="form-control input-lg" ID="txtq4702" ClientIDMode="Static" onkeypress="return OnlyNumeric(event)" type="text" Font-Size="Medium" Height="2.1em" placeholder="code" MaxLength="3" runat="server"></asp:TextBox>
+                    <asp:TextBox CssClass="form-control input-lg" ID="txtq4703" ClientIDMode="Static" onkeypress="return OnlyNumeric(event)" type="text" Font-Size="Medium" Height="2.1em" placeholder="code" MaxLength="3" runat="server"></asp:TextBox>
+                    <asp:TextBox CssClass="form-control input-lg" ID="txtq4704" ClientIDMode="Static" onkeypress="return OnlyNumeric(event)" type="text" Font-Size="Medium" Height="2.1em" placeholder="code" MaxLength="3" runat="server"></asp:TextBox>
                 </td>
             </tr>
 

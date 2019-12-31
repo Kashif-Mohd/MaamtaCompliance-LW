@@ -1,8 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="Register_CoreDSS.aspx.cs" Inherits="ComplianceMaamtaLW.Register_CoreDSS" Culture="ar-DZ" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="Update_CoreDSS.aspx.cs" Inherits="ComplianceMaamtaLW.Update_CoreDSS" %>
+
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-
     <style>
         /*change Color of Radio Button*/
 
@@ -83,7 +83,7 @@
                 border-bottom: 1px solid #ddd;
             }
 
-            .tdCSS, th {
+            .tdCSS {
                 margin-top: 1em;
                 display: block;
                 font-family: Trebuchet MS;
@@ -123,7 +123,7 @@
                 width: 100%;
             }
 
-            th, .tdCSS {
+            .tdCSS {
                 width: 50%;
                 padding: 7px;
                 text-align: left;
@@ -146,31 +146,6 @@
     <script>
         function clicknext() {
 
-            if (document.getElementById("dd_ParaList").value == 'Choose Para') {
-                alert("Please select Para List!")
-                document.getElementById("dd_ParaList").focus();
-                return false;
-            }
-            else if (document.getElementById("txtBlock").value == '' || document.getElementById("txtBlock").value.length < 2) {
-                alert("Enter Block 2 digit long!")
-                document.getElementById("txtBlock").focus();
-                return false;
-            }
-            else if (document.getElementById("txtStruct").value == '' || document.getElementById("txtStruct").value.length < 3) {
-                alert("Enter Structure 3 digit long!")
-                document.getElementById("txtStruct").focus();
-                return false;
-            }
-            else if (document.getElementById("txtHH").value == '') {
-                alert("Enter House Hold!")
-                document.getElementById("txtHH").focus();
-                return false;
-            }
-            else if (document.getElementById("txtWomanNumber").value == '' || (document.getElementById("txtWomanNumber").value < 1 || document.getElementById("txtWomanNumber").value > 9)) {
-                alert("Enter Woman Number between 1 to 9")
-                document.getElementById("txtWomanNumber").focus();
-                return false;
-            }
             if (document.getElementById("txtWomanNm").value == '') {
                 alert("Enter Woman Name!")
                 document.getElementById("txtWomanNm").focus();
@@ -195,30 +170,89 @@
         }
     </script>
 </asp:Content>
-
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
-
-
     <div style="text-align: center">
 
 
 
         <div style="background-color: #095e66; margin: 0 0 10px 10px; -moz-box-shadow: 0 6px 6px -6px gray; box-shadow: 0 6px 6px -6px gray;">
             <h1 style="text-align: center; margin-top: 10px; font-size: 28px; word-spacing: 5px; color: white; text-transform: capitalize; background-color: #55efc4; padding-top: 8px; padding-bottom: 7px; font-family: Arial">
-                <b>Register - New Married Woman</b></h1>
+                <b>Update - Married Woman Information</b></h1>
         </div>
 
         <br>
         <br>
+
+
+
+        <div style="padding-left: 2%; margin-top: 5px;">
+            <asp:Panel ID="Panel2" runat="server">
+
+                <%--Search Woman by DSSID--%>
+        <div id="divSearch" runat="server" class="col-lg-4 col-lg-offset-4" style="margin-bottom: 10px; margin-top: 5px;">
+                    <div id="imaginary_container" style="margin-top: 10px">
+                        <div class="input-group stylish-input-group">
+                            <asp:TextBox ID="txtSearchDSSID" CssClass="form-control txtboxx" ClientIDMode="Static" runat="server" placeholder="DSSID" MaxLength="11" ForeColor="Black"></asp:TextBox>
+                            <span class="input-group-addon">
+                                <button type="submit" id="btnSearch" runat="server" style="height: 20px" onserverclick="btnSearch_Click">
+                                    <span class="glyphicon glyphicon-search"></span>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="width: 100%; height: 440px; overflow: scroll; margin-top: 40px">
+                    <asp:GridView ID="GridView1" runat="server" EmptyDataText="No Record Found." AllowPaging="True" PageSize="200" OnPageIndexChanging="GridView1_PageIndexChanging" CssClass="footable" AllowSorting="false" ForeColor="#333333" AutoGenerateColumns="false" Width="100%">
+                        <Columns>
+                            <asp:TemplateField HeaderText="Serial no.">
+                                <ItemTemplate>
+                                    <%# Container.DataItemIndex + 1 %>
+                                </ItemTemplate>
+                                <ItemStyle Width="2%" />
+                            </asp:TemplateField>
+                            <asp:BoundField DataField="dssid" HeaderText="DSSID" />
+                            <asp:BoundField DataField="woman_name" HeaderText="Woman Name" />
+                            <asp:BoundField DataField="husband_name" HeaderText="Husband Name" />
+                            <asp:BoundField DataField="dob" HeaderText="Date of Birth" />
+                            <asp:BoundField DataField="Remarks" HeaderText="Remarks" />
+                            <asp:TemplateField HeaderText="">
+                                <ItemTemplate>
+                                    <asp:LinkButton ID="Link_id" OnClick="Link_OpenForm" Text='Edit' runat="server" ToolTip="Open Records" CommandArgument='<%#Eval("dssid")+","+ Eval("woman_name")+","+ Eval("husband_name")+","+ Eval("dob")+","+ Eval("Remarks")%>'></asp:LinkButton>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                        </Columns>
+                        <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+                        <EditRowStyle BackColor="#999999" />
+                        <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                        <HeaderStyle BackColor="#33d9b2" ForeColor="white" Font-Bold="True" Height="30px" HorizontalAlign="Center" />
+                        <PagerStyle BackColor="#576574" ForeColor="White" CssClass="StylePager" />
+                        <PagerSettings Position="TopAndBottom" Mode="NumericFirstLast" PreviousPageText="&amp;lt;" PageButtonCount="13" />
+
+                        <RowStyle BackColor="#F7F6F3" ForeColor="#333333" HorizontalAlign="Center" />
+                        <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+                        <SortedAscendingCellStyle BackColor="#E9E7E2" />
+                        <SortedAscendingHeaderStyle BackColor="#506C8C" />
+                        <SortedDescendingCellStyle BackColor="#FFFDF8" />
+                        <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
+                    </asp:GridView>
+                </div>
+            </asp:Panel>
+        </div>
+
+
+
+
+
+
+
+
+
         <div style="text-align: center">
-
-
-
-            <asp:Panel ID="Panel1" runat="server">
+            <asp:Panel ID="Panel1" runat="server" DefaultButton="btnUpdate" Visible="false">
                 <div class="Mobile">
-
                     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                         <ContentTemplate>
                             <asp:UpdateProgress ID="updateProgress" runat="server">
@@ -233,36 +267,9 @@
 
 
                                 <tr class="trCSS">
-                                    <td class="TableColumn tdCSS">Site</td>
+                                    <td class="TableColumn tdCSS">DSSID</td>
                                     <td class="Space tdCSS">
-                                        <asp:TextBox CssClass="form-control input-lg" ID="txtSite" type="text" ReadOnly="true" ClientIDMode="Static" Font-Size="Medium" Height="2.1em" Style="text-transform: uppercase;" MaxLength="2" placeholder="Site" runat="server"></asp:TextBox></td>
-                                </tr>
-                                <tr class="trCSS">
-                                    <td class="TableColumn tdCSS">Para</td>
-                                    <td class="Space tdCSS">
-                                        <asp:DropDownList ID="dd_ParaList" CssClass="form-control textBoxCSS" runat="server" ClientIDMode="Static" AppendDataBoundItems="true">
-                                        </asp:DropDownList>
-                                </tr>
-                                <tr class="trCSS">
-                                    <td class="TableColumn tdCSS">Block</td>
-                                    <td class="Space tdCSS">
-                                        <asp:TextBox CssClass="form-control input-lg" ID="txtBlock" type="tel" ClientIDMode="Static" Font-Size="Medium" onkeypress="return OnlyNumeric(event)" MaxLength="2" Height="2.1em" placeholder="block" runat="server"></asp:TextBox></td>
-                                </tr>
-                                <tr class="trCSS">
-                                    <td class="TableColumn tdCSS">Structure</td>
-                                    <td class="Space tdCSS">
-                                        <asp:TextBox CssClass="form-control input-lg" ID="txtStruct" type="tel" ClientIDMode="Static" Font-Size="Medium" onkeypress="return OnlyNumeric(event)" MaxLength="3" Height="2.1em" placeholder="structure" runat="server"></asp:TextBox></td>
-                                </tr>
-                                <tr class="trCSS">
-                                    <td class="TableColumn tdCSS">Family / House Hold</td>
-                                    <td class="Space tdCSS">
-
-                                        <asp:TextBox CssClass="form-control input-lg" ID="txtHH" type="text" ClientIDMode="Static" Font-Size="Medium" Height="2.1em" Style="text-transform: uppercase;" onkeypress="return onlyAlphabets()" MaxLength="1" placeholder="house hold" runat="server"></asp:TextBox></td>
-                                </tr>
-                                <tr class="trCSS">
-                                    <td class="TableColumn tdCSS">Woman Number</td>
-                                    <td class="Space tdCSS">
-                                        <asp:TextBox CssClass="form-control input-lg" ID="txtWomanNumber" type="tel" ClientIDMode="Static" Font-Size="Medium" onkeypress="return OnlyNumeric(event)" Height="2.1em" MaxLength="1" placeholder="woman no." runat="server"></asp:TextBox></td>
+                                        <asp:TextBox CssClass="form-control input-lg" ID="txtDSSID" type="text" ReadOnly="true" ClientIDMode="Static" Font-Size="Medium" Height="2.1em" Style="text-transform: uppercase;" MaxLength="2" placeholder="Site" runat="server"></asp:TextBox></td>
                                 </tr>
 
 
@@ -282,7 +289,7 @@
                                     <td class="TableColumn tdCSS">Date of Registration</td>
                                     <td class="Space tdCSS">
                                         <asp:TextBox CssClass="form-control input-lg" ID="txtDOR" ClientIDMode="Static" type="text" Font-Size="Medium" Height="2.1em" placeholder="Date" runat="server"></asp:TextBox></td>
-                                    <cc1:maskededitextender id="MaskedEditExtender2" runat="server" mask="99/99/9999" masktype="Date" targetcontrolid="txtDOR" />
+                                    <cc1:MaskedEditExtender ID="MaskedEditExtender2" runat="server" Mask="99/99/9999" MaskType="Date" TargetControlID="txtDOR" />
                                 </tr>
                                 <tr class="trCSS">
                                     <td class="TableColumn tdCSS">Age</td>
@@ -303,7 +310,7 @@
                     <br>
                     <br>
                     <div class="buttonWeb">
-                        <asp:Button ID="btnSubmit" runat="server" Text="SUBMIT" class="btn btn-theme btn-lg btn-block" OnClick="submit_Click" OnClientClick="return clicknext();" />
+                        <asp:Button ID="btnUpdate" runat="server" Text="UPDATE" class="btn btn-theme btn-lg btn-block" OnClick="Update_Click" OnClientClick="return clicknext();" />
                     </div>
                 </div>
             </asp:Panel>
@@ -311,5 +318,4 @@
             <br>
         </div>
     </div>
-
 </asp:Content>

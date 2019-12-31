@@ -166,6 +166,15 @@ namespace ComplianceMaamtaLW {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl Register_CoreDSS;
         
         /// <summary>
+        /// Update_CoreDSS control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Update_CoreDSS;
+        
+        /// <summary>
         /// Compliance control.
         /// </summary>
         /// <remarks>
