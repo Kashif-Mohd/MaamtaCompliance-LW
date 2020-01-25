@@ -214,6 +214,8 @@
                     <asp:BoundField DataField="q49_03" HeaderText="q49_03" />
                     <asp:BoundField DataField="q50" HeaderText="q50" />
                     <asp:BoundField DataField="q51" HeaderText="q51" />
+                    <asp:BoundField DataField="q52" HeaderText="q52" />
+                    <asp:BoundField DataField="length_of_symptoms" HeaderText="length_of_symptoms" />
 
 
                     <asp:BoundField DataField="status" HeaderText="status" />
@@ -359,6 +361,8 @@
                     <asp:BoundField DataField="q49_03" HeaderText="q49_03" />
                     <asp:BoundField DataField="q50" HeaderText="q50" />
                     <asp:BoundField DataField="q51" HeaderText="q51" />
+                    <asp:BoundField DataField="q52" HeaderText="q52" />
+                    <asp:BoundField DataField="length_of_symptoms" HeaderText="length_of_symptoms" />
 
                     <asp:BoundField DataField="status" HeaderText="status" />
 

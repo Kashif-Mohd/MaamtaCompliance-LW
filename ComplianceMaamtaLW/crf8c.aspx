@@ -556,10 +556,11 @@
                     <asp:RadioButtonList ID="txtq34" runat="server" ClientIDMode="Static" onclick="RadioButton('txtq34')">
                         <asp:ListItem Text="&nbsp Resolved" Value="1" />
                         <asp:ListItem Text="&nbsp Improved" Value="2" />
-                        <asp:ListItem Text="&nbsp Unchanged" Value="3" />
+                        <asp:ListItem Text="&nbsp Persist / Not Improved" Value="3" />
                         <asp:ListItem Text="&nbsp Worsened" Value="4" />
                         <asp:ListItem Text="&nbsp Death" Value="5" />
                         <asp:ListItem Text="&nbsp Other" Value="6" />
+                        <asp:ListItem Text="&nbsp Treatment hold by the Family / LAMA" Value="7" />
                     </asp:RadioButtonList>
                 </td>
             </tr>

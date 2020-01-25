@@ -82,7 +82,7 @@ namespace ComplianceMaamtaLW
                 {
                     con.Open();
                     MySqlCommand cmd;
-                    cmd = new MySqlCommand("select * from crf8 WHERE status='1' and dssid LIKE '%" + txtdssid.Text + "%' and (str_to_date(q2, '%d-%m-%Y') between str_to_date('" + txtCalndrDate.Text + "', '%d-%m-%Y') and str_to_date('" + txtCalndrDate1.Text + "', '%d-%m-%Y')) order by (str_to_date(q2, '%d-%m-%Y'))", con);
+                    cmd = new MySqlCommand("select * from view_crf8 WHERE status='1' and dssid LIKE '%" + txtdssid.Text + "%' and (str_to_date(q2, '%d-%m-%Y') between str_to_date('" + txtCalndrDate.Text + "', '%d-%m-%Y') and str_to_date('" + txtCalndrDate1.Text + "', '%d-%m-%Y')) order by (str_to_date(q2, '%d-%m-%Y'))", con);
                     MySqlDataAdapter sda = new MySqlDataAdapter();
                     {
                         cmd.Connection = con;
@@ -100,7 +100,7 @@ namespace ComplianceMaamtaLW
                 {
                     con.Open();
                     MySqlCommand cmd;
-                    cmd = new MySqlCommand("select * from crf8 where status='1' and  dssid like '%" + txtdssid.Text + "%'  order by (str_to_date(q2, '%d-%m-%Y'))", con);
+                    cmd = new MySqlCommand("select * from view_crf8 where status='1' and  dssid like '%" + txtdssid.Text + "%'  order by (str_to_date(q2, '%d-%m-%Y'))", con);
                     MySqlDataAdapter sda = new MySqlDataAdapter();
                     {
                         cmd.Connection = con;
@@ -137,7 +137,7 @@ namespace ComplianceMaamtaLW
             {
                 con.Open();
                 MySqlCommand cmd;
-                cmd = new MySqlCommand("select *, mid(dssid,1,2) as q8,mid(dssid,3,2) as q9,mid(dssid,5,2) as q10,mid(dssid,7,3) as q11,mid(dssid,10,1) as q12,mid(dssid,11,1) as q13       from crf8 where status='1' and  study_id='" + Study_id + "' and id='" + id + "'", con);
+                cmd = new MySqlCommand("select *, mid(dssid,1,2) as q8,mid(dssid,3,2) as q9,mid(dssid,5,2) as q10,mid(dssid,7,3) as q11,mid(dssid,10,1) as q12,mid(dssid,11,1) as q13       from view_crf8 where status='1' and  study_id='" + Study_id + "' and id='" + id + "'", con);
                 MySqlDataReader dr = cmd.ExecuteReader();
 
                 if (dr.Read() == true)
@@ -538,11 +538,11 @@ namespace ComplianceMaamtaLW
 
                     if (Q34 == "1") Q34 = "Resolved";
                     else if (Q34 == "2") Q34 = "Improved";
-                    else if (Q34 == "3") Q34 = "Unchanged";
+                    else if (Q34 == "3") Q34 = "Persist / Not Improved";
                     else if (Q34 == "4") Q34 = "Worsened";
                     else if (Q34 == "5") Q34 = "Death";
                     else if (Q34 == "6") Q34 = Q34_other;
-                    
+                    else if (Q34 == "7") Q34 = "Treatment hold by the Family / LAMA";
                     ReportParameters.Add(new ReportParameter("Q34", Q34));
                     this.ReportViewer.LocalReport.SetParameters(ReportParameters);
 

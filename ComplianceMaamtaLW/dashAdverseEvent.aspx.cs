@@ -66,7 +66,7 @@ namespace ComplianceMaamtaLW
             {
                 con.Open();
                 MySqlCommand cmd;
-                cmd = new MySqlCommand("select * from crf8 where dssid like '%" + txtdssid.Text + "%'", con);
+                cmd = new MySqlCommand("select * from view_crf8 where dssid like '%" + txtdssid.Text + "%'", con);
                 MySqlDataAdapter sda = new MySqlDataAdapter();
                 {
                     cmd.Connection = con;
@@ -127,7 +127,7 @@ namespace ComplianceMaamtaLW
             {
                 con.Open();
                 MySqlCommand cmd;
-                cmd = new MySqlCommand("select * from crf8 where dssid like '%" + txtdssid.Text + "%'", con);
+                cmd = new MySqlCommand("select * from view_crf8 where dssid like '%" + txtdssid.Text + "%'", con);
 
                 MySqlDataAdapter sda = new MySqlDataAdapter();
                 {
