@@ -137,7 +137,7 @@ namespace ComplianceMaamtaLW
             {
                 con.Open();
                 MySqlCommand cmd;
-                cmd = new MySqlCommand("select *, mid(dssid,1,2) as q8,mid(dssid,3,2) as q9,mid(dssid,5,2) as q10,mid(dssid,7,3) as q11,mid(dssid,10,1) as q12,mid(dssid,11,1) as q13       from view_crf8 where status='1' and  study_id='" + Study_id + "' and id='" + id + "'", con);
+                cmd = new MySqlCommand("select *, mid(dssid,1,2) as q8,mid(dssid,3,2) as q9,mid(dssid,5,2) as q10,mid(dssid,7,3) as q11,mid(dssid,10,1) as q12,mid(dssid,11,1) as q13,(CASE  WHEN q47_01!='' THEN  CONCAT(q47_01,', ')	WHEN q47_01='' THEN  '' END)  AS xQ47_01, (CASE  WHEN q47_02!='' THEN  CONCAT(q47_02,', ')	WHEN q47_02='' THEN  '' END)  AS xQ47_02, (CASE  WHEN q47_03!='' THEN  CONCAT(q47_03,', ')	WHEN q47_03='' THEN  '' END)  AS xQ47_03, (CASE  WHEN q47_04!='' THEN  CONCAT(q47_04,', ')	WHEN q47_04='' THEN  '' END)  AS xQ47_04                from view_crf8 where status='1' and  study_id='" + Study_id + "' and id='" + id + "'", con);
                 MySqlDataReader dr = cmd.ExecuteReader();
 
                 if (dr.Read() == true)
@@ -263,6 +263,21 @@ namespace ComplianceMaamtaLW
                     string Q44 = dr["q44"].ToString();
                     string Q45 = dr["q45"].ToString();
                     string Q46 = dr["q46"].ToString();
+
+                    string Q47_01 = dr["xQ47_01"].ToString();
+                    string Q47_02 = dr["xQ47_02"].ToString();
+                    string Q47_03 = dr["xQ47_03"].ToString();
+                    string Q47_04 = dr["xQ47_04"].ToString();
+
+                    string Q48 = dr["q48"].ToString();
+
+                    string Q49_01 = dr["q49_01"].ToString();
+                    string Q49_02 = dr["q49_02"].ToString();
+                    string Q49_03 = dr["q49_03"].ToString();
+                    
+                    string Q50 = dr["q50"].ToString();
+                    string Q51 = dr["q51"].ToString();
+                    string Q52 = dr["q52"].ToString();
 
 
 
@@ -613,6 +628,57 @@ namespace ComplianceMaamtaLW
                     this.ReportViewer.LocalReport.SetParameters(ReportParameters);
                     ReportParameters.Add(new ReportParameter("Q46", Q46));
                     this.ReportViewer.LocalReport.SetParameters(ReportParameters);
+
+
+
+
+                    // Additional Fields
+                 
+                    string Q47 = Q47_01 + Q47_02 + Q47_03 + Q47_04;
+                    ReportParameters.Add(new ReportParameter("Q47", Q47));
+                    this.ReportViewer.LocalReport.SetParameters(ReportParameters);
+
+
+                    if (Q48 == "1") Q48 = "Completed";
+                    else if (Q48 == "2") Q48 = "Still hospitalized";
+                    else if (Q48 == "3") Q48 = "Death";
+                    else if (Q48 == "4") Q48 = "LAMA";
+                    else if (Q48 == "5") Q48 = "On going";
+                    else if (Q48 == "6") Q48 = "Sudden death";
+                    else if (Q48 == "7") Q48 = "Died at AKUH";
+                    else if (Q48 == "8") Q48 = "Discharged on medication and died later";
+                    else if (Q48 == "9") Q48 = "Refused";
+                    else if (Q48 == "10") Q48 = "Persist";
+
+                    ReportParameters.Add(new ReportParameter("Q48", Q48));
+                    this.ReportViewer.LocalReport.SetParameters(ReportParameters);
+
+                    if (Q49_01 == "1") Q49_01 = "IM/IV injectable, ";
+                    if (Q49_02 == "2") Q49_02 = "Hospitalization, ";
+                    if (Q49_03 == "3") Q49_03 = "Fatal ";
+
+                    string Q49 = Q49_01 + Q49_02 + Q49_03;
+                    ReportParameters.Add(new ReportParameter("Q49", Q49));
+                    this.ReportViewer.LocalReport.SetParameters(ReportParameters);
+
+                    if (Q50 == "1") Q50 = "Yes";
+                    else if (Q50 == "2") Q50 = "No";
+                    else if (Q50 == "3") Q50 = "Not Applicable";
+                    ReportParameters.Add(new ReportParameter("Q50", Q50));
+                    this.ReportViewer.LocalReport.SetParameters(ReportParameters);
+
+                    if (Q51 == "1") Q51 = "Yes";
+                    else if (Q51 == "2") Q51 = "No";
+                    else if (Q51 == "3") Q51 = "Not Applicable";
+                    ReportParameters.Add(new ReportParameter("Q51", Q51));
+                    this.ReportViewer.LocalReport.SetParameters(ReportParameters);
+
+                    if (Q52 == "1") Q52 = "Yes";
+                    else if (Q52 == "2") Q52 = "No";
+                    else if (Q52 == "3") Q52 = "Not Applicable";
+                    ReportParameters.Add(new ReportParameter("Q52", Q52));
+                    this.ReportViewer.LocalReport.SetParameters(ReportParameters);
+
 
                     con.Close();
                 }
