@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="Update_CoreDSS.aspx.cs" Inherits="ComplianceMaamtaLW.Update_CoreDSS" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="Update_CoreDSS.aspx.cs" Inherits="ComplianceMaamtaLW.Update_CoreDSS"     Culture="ar-DZ" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 
