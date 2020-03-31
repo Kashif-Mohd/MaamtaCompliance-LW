@@ -10,321 +10,294 @@
 namespace ComplianceMaamtaLW {
     
     
-    public partial class Main {
+    public partial class second_crf11d {
         
         /// <summary>
-        /// Head1 control.
+        /// UpdatePanel1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlHead Head1;
+        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
         
         /// <summary>
-        /// Link1 control.
+        /// Panel1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlLink Link1;
+        protected global::System.Web.UI.WebControls.Panel Panel1;
         
         /// <summary>
-        /// head control.
+        /// chk01 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.WebControls.CheckBox chk01;
         
         /// <summary>
-        /// form1 control.
+        /// chk02 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.CheckBox chk02;
         
         /// <summary>
-        /// ScriptManger1 control.
+        /// chk03 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.ScriptManager ScriptManger1;
+        protected global::System.Web.UI.WebControls.CheckBox chk03;
         
         /// <summary>
-        /// Dashboard control.
+        /// chk04 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Dashboard;
+        protected global::System.Web.UI.WebControls.CheckBox chk04;
         
         /// <summary>
-        /// dashEmptySachet control.
+        /// chk05 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl dashEmptySachet;
+        protected global::System.Web.UI.WebControls.CheckBox chk05;
         
         /// <summary>
-        /// dashCrf11 control.
+        /// chk06 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl dashCrf11;
+        protected global::System.Web.UI.WebControls.CheckBox chk06;
         
         /// <summary>
-        /// dashSecondCrf11 control.
+        /// chk07 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl dashSecondCrf11;
+        protected global::System.Web.UI.WebControls.CheckBox chk07;
         
         /// <summary>
-        /// dashCrf8 control.
+        /// txtq64a control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl dashCrf8;
+        protected global::System.Web.UI.WebControls.TextBox txtq64a;
         
         /// <summary>
-        /// ReportCRF8 control.
+        /// txtq64b control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ReportCRF8;
+        protected global::System.Web.UI.WebControls.TextBox txtq64b;
         
         /// <summary>
-        /// FieldWorker control.
+        /// txtq64c control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl FieldWorker;
+        protected global::System.Web.UI.WebControls.TextBox txtq64c;
         
         /// <summary>
-        /// showcrf1 control.
+        /// txtq64d control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl showcrf1;
+        protected global::System.Web.UI.WebControls.TextBox txtq64d;
         
         /// <summary>
-        /// showcrf2 control.
+        /// txtq65 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl showcrf2;
+        protected global::System.Web.UI.WebControls.TextBox txtq65;
         
         /// <summary>
-        /// showcrf6 control.
+        /// txtq66 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl showcrf6;
+        protected global::System.Web.UI.WebControls.TextBox txtq66;
         
         /// <summary>
-        /// chWeight control.
+        /// txtq67 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl chWeight;
+        protected global::System.Web.UI.WebControls.TextBox txtq67;
         
         /// <summary>
-        /// coredss control.
+        /// txtq68a control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl coredss;
+        protected global::System.Web.UI.WebControls.TextBox txtq68a;
         
         /// <summary>
-        /// Register_CoreDSS control.
+        /// txtq68b control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Register_CoreDSS;
+        protected global::System.Web.UI.WebControls.TextBox txtq68b;
         
         /// <summary>
-        /// Update_CoreDSS control.
+        /// txtq69 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Update_CoreDSS;
+        protected global::System.Web.UI.WebControls.TextBox txtq69;
         
         /// <summary>
-        /// LinkedDSSID_CoreDSS control.
+        /// PanelSubmit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl LinkedDSSID_CoreDSS;
+        protected global::System.Web.UI.WebControls.Panel PanelSubmit;
         
         /// <summary>
-        /// Compliance control.
+        /// lbeRecord control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Compliance;
+        protected global::System.Web.UI.WebControls.Label lbeRecord;
         
         /// <summary>
-        /// searchdss control.
+        /// txtQ70_1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl searchdss;
+        protected global::System.Web.UI.WebControls.TextBox txtQ70_1;
         
         /// <summary>
-        /// searchfollowups control.
+        /// txtQ70_2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl searchfollowups;
+        protected global::System.Web.UI.WebControls.TextBox txtQ70_2;
         
         /// <summary>
-        /// entryEmptySachet control.
+        /// txtQ70_3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl entryEmptySachet;
+        protected global::System.Web.UI.WebControls.TextBox txtQ70_3;
         
         /// <summary>
-        /// EntryForms control.
+        /// txtQ70_4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl EntryForms;
+        protected global::System.Web.UI.WebControls.TextBox txtQ70_4;
         
         /// <summary>
-        /// crf8 control.
+        /// txtQ70_5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl crf8;
+        protected global::System.Web.UI.WebControls.TextBox txtQ70_5;
         
         /// <summary>
-        /// crf11 control.
+        /// add control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl crf11;
+        protected global::System.Web.UI.WebControls.Button add;
         
         /// <summary>
-        /// second_crf11 control.
+        /// GridView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl second_crf11;
+        protected global::System.Web.UI.WebControls.GridView GridView1;
         
         /// <summary>
-        /// Setting control.
+        /// txtq71 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Setting;
+        protected global::System.Web.UI.WebControls.TextBox txtq71;
         
         /// <summary>
-        /// lbeUserName control.
+        /// txtq71x control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbeUserName;
+        protected global::System.Web.UI.WebControls.TextBox txtq71x;
         
         /// <summary>
-        /// pnl1 control.
+        /// txtq72 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnl1;
+        protected global::System.Web.UI.HtmlControls.HtmlTextArea txtq72;
         
         /// <summary>
-        /// irm1 control.
+        /// btnSubmit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlIframe irm1;
-        
-        /// <summary>
-        /// Button2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton Button2;
-        
-        /// <summary>
-        /// ContentPlaceHolder1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
-        
-        /// <summary>
-        /// ContentPlaceHolder2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder2;
+        protected global::System.Web.UI.WebControls.Button btnSubmit;
     }
 }

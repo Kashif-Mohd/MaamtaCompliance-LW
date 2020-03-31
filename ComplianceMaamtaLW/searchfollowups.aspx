@@ -97,6 +97,7 @@
                     <asp:BoundField DataField="woman_nm" HeaderText="Woman Name" />
                     <asp:BoundField DataField="husband_nm" HeaderText="Husband Name" />
                     <asp:BoundField DataField="DOV" HeaderText="Date of Visit" />
+                    <asp:BoundField DataField="TOV" HeaderText="Time of Visit" />
                     <asp:BoundField DataField="lw_crf5a_29" HeaderText="Required Sachet" />
                     <asp:BoundField DataField="lw_crf5a_30" HeaderText="Received Sachet by LW" />
                     <asp:BoundField DataField="name" HeaderText="SRA Name" />
@@ -115,9 +116,6 @@
                 <SortedDescendingCellStyle BackColor="#FFFDF8" />
                 <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
             </asp:GridView>
-
-
-
 
           
         </div>

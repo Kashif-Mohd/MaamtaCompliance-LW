@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="crf11a.aspx.cs" Inherits="ComplianceMaamtaLW.crf11a" Culture="en-GB" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="second_updatecrf11a.aspx.cs" Inherits="ComplianceMaamtaLW.second_updatecrf11a"  Culture="en-GB" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
@@ -178,7 +178,9 @@
                 return false;
             }
         }
+
     </script>
+
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -187,66 +189,15 @@
     <div style="padding-left: 2%; margin-top: 5px;">
 
         <div style="color: #ff6b6b; font-size: 22px; width: 100%">
-            Physician Assessment (CRF-11) &nbsp  1st Entry:
+            Update Physician Assessment (CRF-11):
         </div>
         <hr style="border-top: 1px solid #ccc; margin-top: 3px">
 
-        <%--Search Woman by DSSID--%>
-
-        <div runat="server" id="forSearch">
-
-
-            <div id="divSearch" runat="server" class="col-lg-4 col-lg-offset-4" style="margin-bottom: 10px; margin-top: -10px;">
-                <div id="imaginary_container" style="margin-top: 10px">
-                    <div class="input-group stylish-input-group">
-                        <asp:TextBox ID="txtdssid" CssClass="form-control txtboxx" ClientIDMode="Static" runat="server" placeholder="DSSID" MaxLength="11" ForeColor="Black"></asp:TextBox>
-                        <span class="input-group-addon">
-                            <button type="submit" id="btnSearch" runat="server" style="height: 20px" onserverclick="btnSearch_Click">
-                                <span class="glyphicon glyphicon-search"></span>
-                            </button>
-                        </span>
-                    </div>
-                </div>
-            </div>
-
-
-
-
-            <div style="width: 100%; height: 440px; overflow: scroll; margin-top: 40px">
-                <asp:GridView ID="GridView1" runat="server" EmptyDataText="No Record Found." CssClass="footable" AllowPaging="True" PageSize="200" OnPageIndexChanging="GridView1_PageIndexChanging" AllowSorting="false" ForeColor="#333333" AutoGenerateColumns="false" Width="100%">
-                    <Columns>
-                        <asp:BoundField DataField="assis_id" HeaderText="Assessment ID" />
-                        <asp:BoundField DataField="study_id" HeaderText="Study ID" />
-                        <asp:BoundField DataField="rand_id" HeaderText="Randomization ID" />
-                        <asp:BoundField DataField="dssid" HeaderText="DSSID" />
-                        <asp:BoundField DataField="woman_nm" HeaderText="Woman Name" />
-                        <asp:BoundField DataField="husband_nm" HeaderText="Husband Name" />
-                        <asp:TemplateField HeaderText="">
-                            <ItemTemplate>
-                                <asp:LinkButton ID="Link_id" OnClick="Link_OpenForm" Text='Open Form' runat="server" ToolTip="Add Physician Form" CommandArgument='<%#Eval("assis_id")+","+ Eval("study_id")+","+ Eval("rand_id")+","+ Eval("dssid")+","+ Eval("woman_nm")+","+ Eval("husband_nm")+","+ Eval("dob")+","+ Eval("site")+","+ Eval("para")+","+ Eval("block")+","+ Eval("struct")+","+ Eval("HH")+","+ Eval("wm_no")%>'></asp:LinkButton>
-                            </ItemTemplate>
-                        </asp:TemplateField>
-                    </Columns>
-                    <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
-                    <EditRowStyle BackColor="#999999" />
-                    <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-                    <HeaderStyle BackColor="#33d9b2" ForeColor="white" Font-Bold="True" Height="40px" />
-                    <PagerStyle BackColor="#576574" ForeColor="White" CssClass="StylePager" />
-                    <PagerSettings Position="TopAndBottom" Mode="NumericFirstLast" PreviousPageText="&amp;lt;" PageButtonCount="13" />
-                    <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
-                    <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
-                    <SortedAscendingCellStyle BackColor="#E9E7E2" />
-                    <SortedAscendingHeaderStyle BackColor="#506C8C" />
-                    <SortedDescendingCellStyle BackColor="#FFFDF8" />
-                    <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
-                </asp:GridView>
-            </div>
-        </div>
 
 
 
         <%--Entry Forms--%>
-        <div runat="server" id="forEntry" visible="false">
+        <div runat="server" id="forEntry" visible="true">
 
             <asp:Panel ID="Panel1" runat="server" DefaultButton="btnNext">
 
@@ -276,7 +227,7 @@
                         <tr class="trCSS">
                             <td class="TableColumn tdCSS">Q3. Date of Visit</td>
                             <td class="Space tdCSS">
-                                <asp:TextBox CssClass="form-control input-lg" ID="txtDOV" ClientIDMode="Static" type="text" Font-Size="Medium" Height="2.1em" placeholder="Date" runat="server"></asp:TextBox></td>
+                                <asp:TextBox CssClass="form-control input-lg" ID="txtDOV" ReadOnly="true" ClientIDMode="Static" type="text" Font-Size="Medium" Height="2.1em" placeholder="Date" runat="server"></asp:TextBox></td>
                             <cc1:MaskedEditExtender ID="MaskedEditExtender2" runat="server" Mask="99/99/9999" MaskType="Date" TargetControlID="txtDOV" />
                         </tr>
                         <tr class="trCSS">
@@ -315,8 +266,6 @@
                             <td class="Space tdCSS">
                                 <asp:TextBox CssClass="form-control input-lg" ID="txtq8HusbndNm" Style="text-transform: uppercase" ClientIDMode="Static" type="text" Font-Size="Medium" Height="2.1em" onkeypress="return onlyAlphabets()" placeholder="husband name" MaxLength="25" runat="server"></asp:TextBox></td>
                         </tr>
-
-
 
                     </table>
                     <br />

@@ -32,6 +32,7 @@ namespace ComplianceMaamtaLW
                 // Sub Menu
                 Register_CoreDSS.Visible = false;
                 Update_CoreDSS.Visible = false;
+                LinkedDSSID_CoreDSS.Visible = false;
 
                 // Main Menu
                 Dashboard.Visible = false;
@@ -80,6 +81,12 @@ namespace ComplianceMaamtaLW
                     dashCrf11.Attributes.Add("class", "active");
                     Session["WebForm"] = null;
                 }
+                else if (Convert.ToString(Session["WebForm"]) == "dashSecondCrf11")
+                {
+                    Dashboard.Attributes.Add("class", "active");
+                    dashSecondCrf11.Attributes.Add("class", "active");
+                    Session["WebForm"] = null;
+                }
                 else if (Convert.ToString(Session["WebForm"]) == "dashCrf8")
                 {
                     Dashboard.Attributes.Add("class", "active");
@@ -123,6 +130,12 @@ namespace ComplianceMaamtaLW
                     Update_CoreDSS.Attributes.Add("class", "active");
                     Session["WebForm"] = null;
                 }
+                else if (Convert.ToString(Session["WebForm"]) == "LinkedDSSID_CoreDSS")
+                {
+                    FieldWorker.Attributes.Add("class", "active");
+                    LinkedDSSID_CoreDSS.Attributes.Add("class", "active");
+                    Session["WebForm"] = null;
+                }
                 else if (Convert.ToString(Session["WebForm"]) == "chWeight")
                 {
                     FieldWorker.Attributes.Add("class", "active");
@@ -151,6 +164,12 @@ namespace ComplianceMaamtaLW
                 {
                     EntryForms.Attributes.Add("class", "active");
                     crf11.Attributes.Add("class", "active");
+                    Session["WebForm"] = null;
+                }
+                else if (Convert.ToString(Session["WebForm"]) == "second_crf11")
+                {
+                    EntryForms.Attributes.Add("class", "active");
+                    second_crf11.Attributes.Add("class", "active");
                     Session["WebForm"] = null;
                 }
                 else if (Convert.ToString(Session["WebForm"]) == "crf8")

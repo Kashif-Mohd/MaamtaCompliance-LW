@@ -246,7 +246,8 @@
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dashboard <i class="icon-angle-down"></i></a>
                                 <ul class="dropdown-menu">
                                     <li runat="server" id="dashEmptySachet"><a href="dashEmptySachet.aspx">Empty Sachet</a></li>
-                                    <li runat="server" id="dashCrf11"><a href="dashPhysician.aspx">Physician Form</a></li>
+                                    <li runat="server" id="dashCrf11"><a href="dashPhysician.aspx">Physician Form (1st Entry)</a></li>
+                                    <li runat="server" id="dashSecondCrf11"><a href="dashSecondPhysician.aspx">Physician Form (2nd Entry)</a></li>
                                     <li runat="server" id="dashCrf8"><a href="dashAdverseEvent.aspx">Adverse Event (CRF8)</a></li>
                                     <li runat="server" id="ReportCRF8"><a href="ReportCRF8.aspx">Report- Adverse Event (CRF8)</a></li>
                                 </ul>
@@ -262,6 +263,7 @@
                                     <li runat="server" id="coredss"><a href="coredss.aspx">CORE DSS</a></li>
                                     <li runat="server" id="Register_CoreDSS"><a href="Register_CoreDSS.aspx">Register New MW</a></li>
                                     <li runat="server" id="Update_CoreDSS"><a href="Update_CoreDSS.aspx">Update CORE DSS</a></li>
+                                    <li runat="server" id="LinkedDSSID_CoreDSS"><a href="LinkedDSSID_CoreDSS.aspx">Linked Old to New DSS</a></li>
                                 </ul>
                             </li>
 
@@ -280,7 +282,8 @@
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Entry Forms <i class="icon-angle-down"></i></a>
                                 <ul class="dropdown-menu">
                                     <li runat="server" id="crf8"><a href="crf8a.aspx">Entry CRF-8</a></li>
-                                    <li runat="server" id="crf11"><a href="crf11a.aspx">Entry CRF-11</a></li>
+                                    <li runat="server" id="crf11"><a href="crf11a.aspx">1st Entry CRF-11</a></li>
+                                    <li runat="server" id="second_crf11"><a href="second_crf11a.aspx">2nd Entry CRF-11</a></li>
                                 </ul>
                             </li>
 

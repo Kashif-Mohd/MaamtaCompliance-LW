@@ -19,9 +19,6 @@ namespace ComplianceMaamtaLW
         //MySQL Server
         string ConDataBase_COREDSS_MySQL = System.Configuration.ConfigurationManager.ConnectionStrings["ServerLinkCoreDSSMySQL"].ConnectionString;
         //SQL Server
-
-
-        string ConDataBaseSQL_LW = System.Configuration.ConfigurationManager.ConnectionStrings["ServerLink"].ConnectionString;
         string ConDataBase_COREDSS_SQL = System.Configuration.ConfigurationManager.ConnectionStrings["ServerLinkCoreDSS"].ConnectionString;
 
 
@@ -242,6 +239,8 @@ namespace ComplianceMaamtaLW
             txtAge.Text = "";
             txtremarks.InnerText = "";
         }
+
+
 
     }
 }

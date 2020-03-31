@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="crf11a.aspx.cs" Inherits="ComplianceMaamtaLW.crf11a" Culture="en-GB" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="second_crf11a.aspx.cs" Inherits="ComplianceMaamtaLW.second_crf11a" Culture="en-GB" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
@@ -187,7 +187,7 @@
     <div style="padding-left: 2%; margin-top: 5px;">
 
         <div style="color: #ff6b6b; font-size: 22px; width: 100%">
-            Physician Assessment (CRF-11) &nbsp  1st Entry:
+            Physician Assessment (CRF-11) &nbsp   2nd Entry:
         </div>
         <hr style="border-top: 1px solid #ccc; margin-top: 3px">
 
@@ -333,3 +333,4 @@
         </div>
     </div>
 </asp:Content>
+

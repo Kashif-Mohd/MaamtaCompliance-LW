@@ -1,5 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="dashPhysician.aspx.cs" Inherits="ComplianceMaamtaLW.dashPhysician" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="dashSecondPhysician.aspx.cs" Inherits="ComplianceMaamtaLW.dashSecondPhysician" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
@@ -60,7 +59,7 @@
 
     <div style="padding-left: 2%; margin-top: 25px;">
         <div style="color: #ff6b6b; font-size: 22px; width: 100%">
-            Physician Form (CRF11) 1st Entry:
+            Physician Form (CRF11) 2nd Entry:
             <asp:Label ID="lbeDateFromTo" ForeColor="#10ac84" Font-Size="17px" Font-Bold="true" runat="server" Text=""></asp:Label>
         </div>
         <hr style="border-top: 1px solid #ccc; background: transparent; margin-top: -3px">

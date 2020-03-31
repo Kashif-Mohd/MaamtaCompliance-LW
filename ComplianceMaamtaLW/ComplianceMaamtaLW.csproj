@@ -164,6 +164,7 @@
     <Content Include="dashAdverseEvent.aspx" />
     <Content Include="dashEmptySachet.aspx" />
     <Content Include="dashPhysician.aspx" />
+    <Content Include="dashSecondPhysician.aspx" />
     <Content Include="editDetails.aspx" />
     <Content Include="entryEmptySachet.aspx" />
     <Content Include="fonts\fontawesome-webfont.svg" />
@@ -210,11 +211,20 @@
     <Content Include="js\jquery.easing.min.js" />
     <Content Include="js\modernizr-2.6.2-respond-1.1.0.min.js" />
     <Content Include="js\scrolling-nav.js" />
+    <Content Include="LinkedDSSID_CoreDSS.aspx" />
     <Content Include="login.aspx" />
     <Content Include="Register_CoreDSS.aspx" />
     <Content Include="ReportCRF8.aspx" />
     <Content Include="searchdss.aspx" />
     <Content Include="searchfollowups.aspx" />
+    <Content Include="second_crf11a.aspx" />
+    <Content Include="second_crf11b.aspx" />
+    <Content Include="second_crf11c.aspx" />
+    <Content Include="second_crf11d.aspx" />
+    <Content Include="second_updatecrf11a.aspx" />
+    <Content Include="second_updatecrf11b.aspx" />
+    <Content Include="second_updatecrf11c.aspx" />
+    <Content Include="second_updatecrf11d.aspx" />
     <Content Include="showcrf1.aspx" />
     <Content Include="showcrf2.aspx" />
     <Content Include="showcrf6.aspx" />
@@ -323,6 +333,13 @@
     <Compile Include="dashPhysician.aspx.designer.cs">
       <DependentUpon>dashPhysician.aspx</DependentUpon>
     </Compile>
+    <Compile Include="dashSecondPhysician.aspx.cs">
+      <DependentUpon>dashSecondPhysician.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dashSecondPhysician.aspx.designer.cs">
+      <DependentUpon>dashSecondPhysician.aspx</DependentUpon>
+    </Compile>
     <Compile Include="editDetails.aspx.cs">
       <DependentUpon>editDetails.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -336,6 +353,13 @@
     </Compile>
     <Compile Include="entryEmptySachet.aspx.designer.cs">
       <DependentUpon>entryEmptySachet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LinkedDSSID_CoreDSS.aspx.cs">
+      <DependentUpon>LinkedDSSID_CoreDSS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LinkedDSSID_CoreDSS.aspx.designer.cs">
+      <DependentUpon>LinkedDSSID_CoreDSS.aspx</DependentUpon>
     </Compile>
     <Compile Include="login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
@@ -379,6 +403,62 @@
     </Compile>
     <Compile Include="searchfollowups.aspx.designer.cs">
       <DependentUpon>searchfollowups.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="second_crf11a.aspx.cs">
+      <DependentUpon>second_crf11a.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="second_crf11a.aspx.designer.cs">
+      <DependentUpon>second_crf11a.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="second_crf11b.aspx.cs">
+      <DependentUpon>second_crf11b.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="second_crf11b.aspx.designer.cs">
+      <DependentUpon>second_crf11b.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="second_crf11c.aspx.cs">
+      <DependentUpon>second_crf11c.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="second_crf11c.aspx.designer.cs">
+      <DependentUpon>second_crf11c.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="second_crf11d.aspx.cs">
+      <DependentUpon>second_crf11d.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="second_crf11d.aspx.designer.cs">
+      <DependentUpon>second_crf11d.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="second_updatecrf11a.aspx.cs">
+      <DependentUpon>second_updatecrf11a.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="second_updatecrf11a.aspx.designer.cs">
+      <DependentUpon>second_updatecrf11a.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="second_updatecrf11b.aspx.cs">
+      <DependentUpon>second_updatecrf11b.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="second_updatecrf11b.aspx.designer.cs">
+      <DependentUpon>second_updatecrf11b.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="second_updatecrf11c.aspx.cs">
+      <DependentUpon>second_updatecrf11c.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="second_updatecrf11c.aspx.designer.cs">
+      <DependentUpon>second_updatecrf11c.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="second_updatecrf11d.aspx.cs">
+      <DependentUpon>second_updatecrf11d.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="second_updatecrf11d.aspx.designer.cs">
+      <DependentUpon>second_updatecrf11d.aspx</DependentUpon>
     </Compile>
     <Compile Include="showcrf1.aspx.cs">
       <DependentUpon>showcrf1.aspx</DependentUpon>

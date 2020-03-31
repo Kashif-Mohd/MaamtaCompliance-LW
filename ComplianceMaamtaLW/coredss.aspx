@@ -145,7 +145,6 @@
                     <asp:BoundField DataField="woman_name" HeaderText="Woman Name" />
                     <asp:BoundField DataField="husband_name" HeaderText="Husband Name" />
                     <asp:BoundField DataField="dob" HeaderText="Date of Birth" />
-                    <asp:BoundField DataField="Remarks" HeaderText="Remarks" />
                     <asp:BoundField DataField="status" HeaderText="Status" />
                     <asp:BoundField DataField="new_dssid" HeaderText="New DSSID" />
                     <asp:BoundField DataField="new_dssid_dt" HeaderText="Date of New DSS" />

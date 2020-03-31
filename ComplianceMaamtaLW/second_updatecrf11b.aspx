@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="crf11b.aspx.cs" Inherits="ComplianceMaamtaLW.crf11b"  Culture="en-GB" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="second_updatecrf11b.aspx.cs" Inherits="ComplianceMaamtaLW.second_updatecrf11b"  Culture="en-GB"  %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
@@ -149,7 +149,7 @@
         window.onload = function () {
             if (document.getElementById("txtq15").value == '9') {
                 document.getElementById("Q15other").style.display = 'table-row';
-            }         
+            }
             if (document.getElementById("txtq31").value == '1') {
                 document.getElementById("divQ32").style.display = 'block';
             }
@@ -198,7 +198,7 @@
 
         function clicknext() {
 
-         
+
 
             //if (Q1501.checked == false && Q1502.checked == false && Q1503.checked == false && Q1504.checked == false && Q1505.checked == false && Q1506.checked == false && Q1507.checked == false && Q1508.checked == false && Q1509.checked == false) {
             //    alert("Select Q15 checks from 1 to 9")
@@ -309,6 +309,8 @@
                 document.getElementById("txtq31").focus();
                 return false;
             }
+
+
         }
 
 
@@ -351,6 +353,7 @@
                 document.getElementById("txtQ32_5").focus();
                 return false;
             }
+
         }
     </script>
 </asp:Content>

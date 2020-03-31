@@ -1,5 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="crf11d.aspx.cs" Inherits="ComplianceMaamtaLW.crf11d"  Culture="en-GB" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="second_updatecrf11d.aspx.cs" Inherits="ComplianceMaamtaLW.second_updatecrf11d"  Culture="en-GB" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
@@ -141,118 +140,116 @@
     </style>
 
 
-    <script type="text/javascript">
+     <script type="text/javascript">
 
-        window.onload = function () {
-            var chk07 = document.getElementById('<%= chk07.ClientID %>');
-            if (chk07.checked) {
-                document.getElementById("divQ64a").style.display = "table-row";
-                document.getElementById("divQ64b").style.display = "table-row";
-            }
-            if (document.getElementById("txtq69").value == '1') {
-                document.getElementById("divQ70").style.display = 'block';
-            }
-            if (document.getElementById("txtq71").value == '6') {
-                document.getElementById("divQ71x").style.display = 'table-row';
-            }
-            if (document.getElementById("txtq67").value == '2') {
-                document.getElementById("divQ68a").style.display = 'table-row';
-                document.getElementById("divQ68b").style.display = 'table-row';
-            }
-        }
-
-
+         window.onload = function () {
+             var chk07 = document.getElementById('<%= chk07.ClientID %>');
+             if (chk07.checked) {
+                 document.getElementById("divQ64a").style.display = "table-row";
+                 document.getElementById("divQ64b").style.display = "table-row";
+             }
+             if (document.getElementById("txtq69").value == '1') {
+                 document.getElementById("divQ70").style.display = 'block';
+             }
+             if (document.getElementById("txtq71").value == '6') {
+                 document.getElementById("divQ71x").style.display = 'table-row';
+             }
+             if (document.getElementById("txtq67").value == '2') {
+                 document.getElementById("divQ68a").style.display = 'table-row';
+                 document.getElementById("divQ68b").style.display = 'table-row';
+             }
+         }
 
 
-        function getChkboxChecked(id) {
-            var chk = document.getElementById(id);
-            if (chk.checked) {
-                document.getElementById("divQ64a").style.display = "table-row";
-                document.getElementById("divQ64b").style.display = "table-row";
-            }
-            else {
-                document.getElementById("divQ64a").style.display = "none";
-                document.getElementById("divQ64b").style.display = "none";
-                document.getElementById("txtq64a").value = "";
-                document.getElementById("txtq64b").value = "";
-                document.getElementById("txtq64c").value = "";
-                document.getElementById("txtq64d").value = "";
-            }
-        }
 
 
+         function getChkboxChecked(id) {
+             var chk = document.getElementById(id);
+             if (chk.checked) {
+                 document.getElementById("divQ64a").style.display = "table-row";
+                 document.getElementById("divQ64b").style.display = "table-row";
+             }
+             else {
+                 document.getElementById("divQ64a").style.display = "none";
+                 document.getElementById("divQ64b").style.display = "none";
+                 document.getElementById("txtq64a").value = "";
+                 document.getElementById("txtq64b").value = "";
+                 document.getElementById("txtq64c").value = "";
+                 document.getElementById("txtq64d").value = "";
+             }
+         }
 
 
 
 
 
-        function enable(id) {
-            var val = document.getElementById(id).value;
-
-            if (id == 'txtq65') {
-                if (val == "" || val != 1) {
-                    document.getElementById("divQ66").style.display = 'table-row';
-                    document.getElementById("divQ67").style.display = 'table-row';
-                    document.getElementById("divQ68a").style.display = 'table-row';
-                    document.getElementById("divQ68b").style.display = 'table-row';
-                }
-                else if (val == "1") {
-                    document.getElementById("divQ66").style.display = 'none';
-                    document.getElementById("divQ67").style.display = 'none';
-                    document.getElementById("divQ68a").style.display = 'none';
-                    document.getElementById("divQ68b").style.display = 'none';
-                }
-            }
 
 
+         function enable(id) {
+             var val = document.getElementById(id).value;
 
-            if (id == 'txtq69') {
-                if (val != "" && val == 1) {
-                    document.getElementById("divQ70").style.display = 'block';
-                }
-                else if (val == "" || val != "1") {
-                    document.getElementById("divQ70").style.display = 'none';
-                }
-            }
-            if (id == 'txtq71') {
-                if (val != "" && val == 7) {
-                    document.getElementById("divQ71x").style.display = 'table-row';
-                }
-                else if (val == "" || val != "7") {
-                    document.getElementById("divQ71x").style.display = 'none';
-                    document.getElementById("txtq71x").value = "";
-                }
-            }
-            if (id == 'txtq66') {
-                if (val != "" && val == 1) {
-                    document.getElementById("divQ67").style.display = 'table-row';
-                    document.getElementById("divQ68a").style.display = 'table-row';
-                    document.getElementById("divQ68b").style.display = 'table-row';
-                }
-                else if (val == "" || val != "1") {
-                    document.getElementById("divQ67").style.display = 'none';
-                    document.getElementById("divQ68a").style.display = 'none';
-                    document.getElementById("divQ68b").style.display = 'none';
-                    document.getElementById("txtq67").value = "";
-                    document.getElementById("txtq68a").value = "";
-                    document.getElementById("txtq68b").value = "";
-                }
-            }
-            if (id == 'txtq67') {
-                if (val != "" && val == 2) {
-                    document.getElementById("divQ68a").style.display = 'table-row';
-                    document.getElementById("divQ68b").style.display = 'table-row';
-                }
-                else if (val == "" || val != "2") {
-                    document.getElementById("divQ68a").style.display = 'none';
-                    document.getElementById("divQ68b").style.display = 'none';
-                    document.getElementById("txtq68a").value = "";
-                    document.getElementById("txtq68b").value = "";
-                }
-            }
-        }
+             if (id == 'txtq65') {
+                 if (val == "" || val != 1) {
+                     document.getElementById("divQ66").style.display = 'table-row';
+                     document.getElementById("divQ67").style.display = 'table-row';
+                     document.getElementById("divQ68a").style.display = 'table-row';
+                     document.getElementById("divQ68b").style.display = 'table-row';
+                 }
+                 else if (val == "1") {
+                     document.getElementById("divQ66").style.display = 'none';
+                     document.getElementById("divQ67").style.display = 'none';
+                     document.getElementById("divQ68a").style.display = 'none';
+                     document.getElementById("divQ68b").style.display = 'none';
+                 }
+             }
 
 
+
+             if (id == 'txtq69') {
+                 if (val != "" && val == 1) {
+                     document.getElementById("divQ70").style.display = 'block';
+                 }
+                 else if (val == "" || val != "1") {
+                     document.getElementById("divQ70").style.display = 'none';
+                 }
+             }
+             if (id == 'txtq71') {
+                 if (val != "" && val == 7) {
+                     document.getElementById("divQ71x").style.display = 'table-row';
+                 }
+                 else if (val == "" || val != "7") {
+                     document.getElementById("divQ71x").style.display = 'none';
+                     document.getElementById("txtq71x").value = "";
+                 }
+             }
+             if (id == 'txtq66') {
+                 if (val != "" && val == 1) {
+                     document.getElementById("divQ67").style.display = 'table-row';
+                     document.getElementById("divQ68a").style.display = 'table-row';
+                     document.getElementById("divQ68b").style.display = 'table-row';
+                 }
+                 else if (val == "" || val != "1") {
+                     document.getElementById("divQ67").style.display = 'none';
+                     document.getElementById("divQ68a").style.display = 'none';
+                     document.getElementById("divQ68b").style.display = 'none';
+                     document.getElementById("txtq67").value = "";
+                     document.getElementById("txtq68a").value = "";
+                     document.getElementById("txtq68b").value = "";
+                 }
+             }
+             if (id == 'txtq67') {
+                 if (val != "" && val == 2) {
+                     document.getElementById("divQ68a").style.display = 'table-row';
+                     document.getElementById("divQ68b").style.display = 'table-row';
+                 }
+                 else if (val == "" || val != "2") {
+                     document.getElementById("divQ68a").style.display = 'none';
+                     document.getElementById("divQ68b").style.display = 'none';
+                     document.getElementById("txtq68a").value = "";
+                     document.getElementById("txtq68b").value = "";
+                 }
+             }
+         }
 
 
 
@@ -261,8 +258,10 @@
 
 
 
-        function clicknext() {
-            var Q6401 = document.getElementById('<%= chk01.ClientID %>');
+
+
+         function clicknext() {
+             var Q6401 = document.getElementById('<%= chk01.ClientID %>');
             var Q6402 = document.getElementById('<%= chk02.ClientID %>');
             var Q6403 = document.getElementById('<%= chk03.ClientID %>');
             var Q6404 = document.getElementById('<%= chk04.ClientID %>');
@@ -386,6 +385,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 </asp:Content>
+
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
 
 

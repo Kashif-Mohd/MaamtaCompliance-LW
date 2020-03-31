@@ -7,16 +7,15 @@ using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Data;
 
-
 namespace ComplianceMaamtaLW
 {
-    public partial class dashPhysician : System.Web.UI.Page
+    public partial class dashSecondPhysician : System.Web.UI.Page
     {
         string ConDataBase = System.Configuration.ConfigurationManager.ConnectionStrings["ServerLink"].ConnectionString;
-       
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            Session["WebForm"] = "dashCrf11";
+            Session["WebForm"] = "dashSecondCrf11";
             txtdssid.Focus();
         }
 
@@ -44,7 +43,7 @@ namespace ComplianceMaamtaLW
                 con.Open();
                 SqlCommand cmd;
 
-                cmd = new SqlCommand("select *, DATEDIFF(DAY, CONVERT(datetime,dob,103),CONVERT(datetime,lw_crf11_03dt,103)) as age from crf11 where dssid like '%" + txtdssid.Text.ToUpper() + "%' order by random_id, CONVERT(datetime,lw_crf11_03dt,103) ", con);
+                cmd = new SqlCommand("select *, DATEDIFF(DAY, CONVERT(datetime,dob,103),CONVERT(datetime,lw_crf11_03dt,103)) as age from second_crf11 where dssid like '%" + txtdssid.Text.ToUpper() + "%' order by random_id, CONVERT(datetime,lw_crf11_03dt,103) ", con);
 
                 SqlDataAdapter sda = new SqlDataAdapter();
                 {
@@ -105,7 +104,7 @@ namespace ComplianceMaamtaLW
             {
                 con.Open();
                 SqlCommand cmd;
-                cmd = new SqlCommand("select *, DATEDIFF(DAY, CONVERT(datetime,dob,103),CONVERT(datetime,lw_crf11_03dt,103)) as age from crf11 where dssid like '%" + txtdssid.Text.ToUpper() + "%' order by random_id, CONVERT(datetime,lw_crf11_03dt,103)", con);
+                cmd = new SqlCommand("select *, DATEDIFF(DAY, CONVERT(datetime,dob,103),CONVERT(datetime,lw_crf11_03dt,103)) as age from second_crf11 where dssid like '%" + txtdssid.Text.ToUpper() + "%' order by random_id, CONVERT(datetime,lw_crf11_03dt,103)", con);
 
                 SqlDataAdapter sda = new SqlDataAdapter();
                 {
@@ -138,7 +137,7 @@ namespace ComplianceMaamtaLW
             try
             {
                 Response.Clear();
-                Response.AddHeader("content-disposition", "attachment;filename=1st Physician Form (" + DateTime.Today.ToString("dd-MM-yyyy") + ").xls");
+                Response.AddHeader("content-disposition", "attachment;filename=2nd Physician Form (" + DateTime.Today.ToString("dd-MM-yyyy") + ").xls");
                 Response.Charset = "";
 
                 Response.ContentType = "application/vnd.xls";
@@ -176,20 +175,21 @@ namespace ComplianceMaamtaLW
 
 
 
-     
+
 
         protected void LinkDetail_id(object sender, EventArgs e)
         {
             if (Convert.ToString(Session["Role"]) == "admin_maamtaLW" || Convert.ToString(Session["Role"]) == "super_admin")
             {
-                string[] commandArgs = ((LinkButton)sender).CommandArgument.ToString().Split(new char[] { ',' });               
-                Response.Redirect("updatecrf11a.aspx?&FormID=" + commandArgs[0]);
+                string[] commandArgs = ((LinkButton)sender).CommandArgument.ToString().Split(new char[] { ',' });
+                Response.Redirect("second_updatecrf11a.aspx?&FormID=" + commandArgs[0]);
             }
             else
             {
                 showalert("Only Admin has right to update details");
             }
         }
+
 
 
     }
