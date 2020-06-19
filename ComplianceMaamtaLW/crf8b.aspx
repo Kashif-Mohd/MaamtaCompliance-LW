@@ -149,12 +149,12 @@
         window.onload = function () {
             if ($('#<%= txtq27.ClientID %> input:checked').val() == '5') {
                 document.getElementById("TR_Q27").style.display = 'table-row';
-            }         
+            }
         }
 
 
 
-      
+
 
 
 
@@ -206,10 +206,10 @@
                 return false;
             }
             else if ($('#<%= txtq27.ClientID %> input:checked').val() == '5' && (document.getElementById("txtq27_other").value == '' || document.getElementById("txtq27_other").value.length < 2)) {
-               alert("Enter Other Code, 2 digit long!")
-               document.getElementById("txtq27_other").focus();
-               return false;
-             }
+                alert("Enter Other Code, 2 digit long!")
+                document.getElementById("txtq27_other").focus();
+                return false;
+            }
             else if (document.getElementsByName("txtq27").text == 5 && (document.getElementById("txtq27_other").value == '' || document.getElementById("txtq27_other").value.length < 2)) {
                 alert("Enter Other Code, 2 digit long!")
                 document.getElementById("txtq27_other").focus();
@@ -234,7 +234,7 @@
                 document.getElementById("txtq29_day").focus();
                 return false;
             }
-    }
+}
     </script>
 </asp:Content>
 
@@ -277,7 +277,7 @@
                     </asp:RadioButtonList>
                 </td>
             </tr>
-            <tr class="trCSS" id="TR_Q27" style="display:none">
+            <tr class="trCSS" id="TR_Q27" style="display: none">
                 <td class="TableColumn tdCSS"></td>
                 <td class="Space tdCSS">
                     <asp:TextBox CssClass="form-control input-lg" ID="txtq27_other" ClientIDMode="Static" type="text" Font-Size="Medium" Height="2.1em" placeholder="other" runat="server"></asp:TextBox></td>
@@ -448,6 +448,63 @@
 
 
 
+            <tr class="trCSS">
+                <td class="tdCSS" colspan="2" style="text-align: center;">
+                    <asp:TextBox CssClass="form-control input" ID="txtq30a11dt" ClientIDMode="Static" type="text" Font-Size="Medium" Height="2.1em" placeholder="Date Q30a-(11)" runat="server"></asp:TextBox></td>
+                <cc1:MaskedEditExtender ID="MaskedEditExtender26" runat="server" Mask="99/99/9999" MaskType="Date" TargetControlID="txtq30a11dt" />
+            </tr>
+            <tr class="trCSS">
+                <td class="tdCSS" colspan="2" style="text-align: center;">
+                    <textarea id="txtq30a11" runat="server" style="height: 50px; width: 80%;" placeholder="Q30a-(11)"></textarea></td>
+            </tr>
+
+
+            <tr class="trCSS">
+                <td class="tdCSS" colspan="2" style="text-align: center;">
+                    <asp:TextBox CssClass="form-control input" ID="txtq30a12dt" ClientIDMode="Static" type="text" Font-Size="Medium" Height="2.1em" placeholder="Date Q30a-(12)" runat="server"></asp:TextBox></td>
+                <cc1:MaskedEditExtender ID="MaskedEditExtender27" runat="server" Mask="99/99/9999" MaskType="Date" TargetControlID="txtq30a12dt" />
+            </tr>
+            <tr class="trCSS">
+                <td class="tdCSS" colspan="2" style="text-align: center;">
+                    <textarea id="txtq30a12" runat="server" style="height: 50px; width: 80%;" placeholder="Q30a-(12)"></textarea></td>
+            </tr>
+
+
+            <tr class="trCSS">
+                <td class="tdCSS" colspan="2" style="text-align: center;">
+                    <asp:TextBox CssClass="form-control input" ID="txtq30a13dt" ClientIDMode="Static" type="text" Font-Size="Medium" Height="2.1em" placeholder="Date Q30a-(13)" runat="server"></asp:TextBox></td>
+                <cc1:MaskedEditExtender ID="MaskedEditExtender28" runat="server" Mask="99/99/9999" MaskType="Date" TargetControlID="txtq30a13dt" />
+            </tr>
+            <tr class="trCSS">
+                <td class="tdCSS" colspan="2" style="text-align: center;">
+                    <textarea id="txtq30a13" runat="server" style="height: 50px; width: 80%;" placeholder="Q30a-(13)"></textarea></td>
+            </tr>
+
+
+            <tr class="trCSS">
+                <td class="tdCSS" colspan="2" style="text-align: center;">
+                    <asp:TextBox CssClass="form-control input" ID="txtq30a14dt" ClientIDMode="Static" type="text" Font-Size="Medium" Height="2.1em" placeholder="Date Q30a-(14)" runat="server"></asp:TextBox></td>
+                <cc1:MaskedEditExtender ID="MaskedEditExtender29" runat="server" Mask="99/99/9999" MaskType="Date" TargetControlID="txtq30a14dt" />
+            </tr>
+            <tr class="trCSS">
+                <td class="tdCSS" colspan="2" style="text-align: center;">
+                    <textarea id="txtq30a14" runat="server" style="height: 50px; width: 80%;" placeholder="Q30a-(14)"></textarea></td>
+            </tr>
+
+
+            <tr class="trCSS">
+                <td class="tdCSS" colspan="2" style="text-align: center;">
+                    <asp:TextBox CssClass="form-control input" ID="txtq30a15dt" ClientIDMode="Static" type="text" Font-Size="Medium" Height="2.1em" placeholder="Date Q30a-(15)" runat="server"></asp:TextBox></td>
+                <cc1:MaskedEditExtender ID="MaskedEditExtender30" runat="server" Mask="99/99/9999" MaskType="Date" TargetControlID="txtq30a15dt" />
+            </tr>
+            <tr class="trCSS">
+                <td class="tdCSS" colspan="2" style="text-align: center;">
+                    <textarea id="txtq30a15" runat="server" style="height: 50px; width: 80%;" placeholder="Q30a-(15)"></textarea></td>
+            </tr>
+
+
+
+
 
 
 
@@ -552,7 +609,7 @@
             </tr>
 
 
-             <tr class="trCSS">
+            <tr class="trCSS">
                 <td class="tdCSS" colspan="2" style="text-align: center;">
                     <asp:TextBox CssClass="form-control input" ID="txtq30b9dt" ClientIDMode="Static" type="text" Font-Size="Medium" Height="2.1em" placeholder="Date Q30b-(9)" runat="server"></asp:TextBox></td>
                 <cc1:MaskedEditExtender ID="MaskedEditExtender19" runat="server" Mask="99/99/9999" MaskType="Date" TargetControlID="txtq30b9dt" />
@@ -564,7 +621,7 @@
 
 
 
-             <tr class="trCSS">
+            <tr class="trCSS">
                 <td class="tdCSS" colspan="2" style="text-align: center;">
                     <asp:TextBox CssClass="form-control input" ID="txtq30b10dt" ClientIDMode="Static" type="text" Font-Size="Medium" Height="2.1em" placeholder="Date Q30b-(10)" runat="server"></asp:TextBox></td>
                 <cc1:MaskedEditExtender ID="MaskedEditExtender20" runat="server" Mask="99/99/9999" MaskType="Date" TargetControlID="txtq30b10dt" />
@@ -573,6 +630,64 @@
                 <td class="tdCSS" colspan="2" style="text-align: center;">
                     <textarea id="txtq30b10" runat="server" style="height: 50px; width: 80%;" placeholder="Q30b-(10)"></textarea></td>
             </tr>
+
+
+            <tr class="trCSS">
+                <td class="tdCSS" colspan="2" style="text-align: center;">
+                    <asp:TextBox CssClass="form-control input" ID="txtq30b11dt" ClientIDMode="Static" type="text" Font-Size="Medium" Height="2.1em" placeholder="Date Q30b-(11)" runat="server"></asp:TextBox></td>
+                <cc1:MaskedEditExtender ID="MaskedEditExtender21" runat="server" Mask="99/99/9999" MaskType="Date" TargetControlID="txtq30b11dt" />
+            </tr>
+            <tr class="trCSS">
+                <td class="tdCSS" colspan="2" style="text-align: center;">
+                    <textarea id="txtq30b11" runat="server" style="height: 50px; width: 80%;" placeholder="Q30b-(11)"></textarea></td>
+            </tr>
+
+
+            <tr class="trCSS">
+                <td class="tdCSS" colspan="2" style="text-align: center;">
+                    <asp:TextBox CssClass="form-control input" ID="txtq30b12dt" ClientIDMode="Static" type="text" Font-Size="Medium" Height="2.1em" placeholder="Date Q30b-(12)" runat="server"></asp:TextBox></td>
+                <cc1:MaskedEditExtender ID="MaskedEditExtender22" runat="server" Mask="99/99/9999" MaskType="Date" TargetControlID="txtq30b12dt" />
+            </tr>
+            <tr class="trCSS">
+                <td class="tdCSS" colspan="2" style="text-align: center;">
+                    <textarea id="txtq30b12" runat="server" style="height: 50px; width: 80%;" placeholder="Q30b-(12)"></textarea></td>
+            </tr>
+
+
+            <tr class="trCSS">
+                <td class="tdCSS" colspan="2" style="text-align: center;">
+                    <asp:TextBox CssClass="form-control input" ID="txtq30b13dt" ClientIDMode="Static" type="text" Font-Size="Medium" Height="2.1em" placeholder="Date Q30b-(13)" runat="server"></asp:TextBox></td>
+                <cc1:MaskedEditExtender ID="MaskedEditExtender23" runat="server" Mask="99/99/9999" MaskType="Date" TargetControlID="txtq30b13dt" />
+            </tr>
+            <tr class="trCSS">
+                <td class="tdCSS" colspan="2" style="text-align: center;">
+                    <textarea id="txtq30b13" runat="server" style="height: 50px; width: 80%;" placeholder="Q30b-(13)"></textarea></td>
+            </tr>
+
+
+            <tr class="trCSS">
+                <td class="tdCSS" colspan="2" style="text-align: center;">
+                    <asp:TextBox CssClass="form-control input" ID="txtq30b14dt" ClientIDMode="Static" type="text" Font-Size="Medium" Height="2.1em" placeholder="Date Q30b-(14)" runat="server"></asp:TextBox></td>
+                <cc1:MaskedEditExtender ID="MaskedEditExtender24" runat="server" Mask="99/99/9999" MaskType="Date" TargetControlID="txtq30b14dt" />
+            </tr>
+            <tr class="trCSS">
+                <td class="tdCSS" colspan="2" style="text-align: center;">
+                    <textarea id="txtq30b14" runat="server" style="height: 50px; width: 80%;" placeholder="Q30b-(14)"></textarea></td>
+            </tr>
+
+
+            <tr class="trCSS">
+                <td class="tdCSS" colspan="2" style="text-align: center;">
+                    <asp:TextBox CssClass="form-control input" ID="txtq30b15dt" ClientIDMode="Static" type="text" Font-Size="Medium" Height="2.1em" placeholder="Date Q30b-(15)" runat="server"></asp:TextBox></td>
+                <cc1:MaskedEditExtender ID="MaskedEditExtender25" runat="server" Mask="99/99/9999" MaskType="Date" TargetControlID="txtq30b15dt" />
+            </tr>
+            <tr class="trCSS">
+                <td class="tdCSS" colspan="2" style="text-align: center;">
+                    <textarea id="txtq30b15" runat="server" style="height: 50px; width: 80%;" placeholder="Q30b-(15)"></textarea></td>
+            </tr>
+
+
+
         </table>
 
 

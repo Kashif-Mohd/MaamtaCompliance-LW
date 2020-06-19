@@ -51,7 +51,6 @@ namespace ComplianceMaamtaLW
             {
                 Site = dr["site"].ToString();
 
-
                 if (Site == "1")
                 {
                     txtSite.Text = "BH";
@@ -64,6 +63,11 @@ namespace ComplianceMaamtaLW
                 {
                     txtSite.Text = "AG";
                 }
+                else if (Site == "4")
+                {
+                    txtSite.Text = "IH";
+                }
+
             }
             con.Close();
         }
@@ -192,7 +196,7 @@ namespace ComplianceMaamtaLW
                     }
 
                     // Married_Woman  MySQL:
-                    if (StatusCheckMySQL() == false && txtSite.Text == "RG")
+                    if (StatusCheckMySQL() == false)
                     {
                         MySQL_Connection.Open();
                         MySqlCommand cmd = new MySqlCommand("insert into married_woman (site,para,block,structure,house_hold,woman_number,name,husband_name,age,dob) values ('" + txtSite.Text.ToUpper() + "','" + dd_ParaList.Text.ToUpper() + "','" + txtBlock.Text + "','" + txtStruct.Text + "','" + txtHH.Text.ToUpper() + "','" + txtWomanNumber.Text + "','" + txtWomanNm.Text.ToUpper() + "','" + txtHusbandNm.Text.ToUpper() + "','" + txtAge.Text + "','" + DOB + "')", MySQL_Connection);

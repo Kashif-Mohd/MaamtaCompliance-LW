@@ -194,6 +194,21 @@ namespace ComplianceMaamtaLW
                     string Q30a_9 = dr["q30a_9"].ToString();
                     string Q30a_10dt = dr["q30a_10dt"].ToString();
                     string Q30a_10 = dr["q30a_10"].ToString();
+                    string Q30a_11dt = dr["q30a_11dt"].ToString();
+                    string Q30a_11 = dr["q30a_11"].ToString();
+                    string Q30a_12dt = dr["q30a_12dt"].ToString();
+                    string Q30a_12 = dr["q30a_12"].ToString();
+                    string Q30a_13dt = dr["q30a_13dt"].ToString();
+                    string Q30a_13 = dr["q30a_13"].ToString();
+                    string Q30a_14dt = dr["q30a_14dt"].ToString();
+                    string Q30a_14 = dr["q30a_14"].ToString();
+                    string Q30a_15dt = dr["q30a_15dt"].ToString();
+                    string Q30a_15 = dr["q30a_15"].ToString();
+                    
+                    
+                    
+                    
+                    
                     string Q30b_1dt = dr["q30b_1dt"].ToString();
                     string Q30b_1 = dr["q30b_1"].ToString();
                     string Q30b_2dt = dr["q30b_2dt"].ToString();
@@ -214,6 +229,21 @@ namespace ComplianceMaamtaLW
                     string Q30b_9 = dr["q30b_9"].ToString();
                     string Q30b_10dt = dr["q30b_10dt"].ToString();
                     string Q30b_10 = dr["q30b_10"].ToString();
+                    string Q30b_11dt = dr["q30b_11dt"].ToString();
+                    string Q30b_11 = dr["q30b_11"].ToString();
+                    string Q30b_12dt = dr["q30b_12dt"].ToString();
+                    string Q30b_12 = dr["q30b_12"].ToString();
+                    string Q30b_13dt = dr["q30b_13dt"].ToString();
+                    string Q30b_13 = dr["q30b_13"].ToString();
+                    string Q30b_14dt = dr["q30b_14dt"].ToString();
+                    string Q30b_14 = dr["q30b_14"].ToString();
+                    string Q30b_15dt = dr["q30b_15dt"].ToString();
+                    string Q30b_15 = dr["q30b_15"].ToString();
+                    
+                    
+                    
+                    
+                    
                     string Q31 = dr["q31"].ToString();
                     string Q31_other = dr["q31_other"].ToString();
                     string Q32_1a = dr["q32_1a"].ToString();
@@ -455,6 +485,33 @@ namespace ComplianceMaamtaLW
                     this.ReportViewer.LocalReport.SetParameters(ReportParameters);
                     ReportParameters.Add(new ReportParameter("Q30a_10", Q30a_10));
                     this.ReportViewer.LocalReport.SetParameters(ReportParameters);
+                    ReportParameters.Add(new ReportParameter("Q30a_11dt", Q30a_11dt));
+                    this.ReportViewer.LocalReport.SetParameters(ReportParameters);
+                    ReportParameters.Add(new ReportParameter("Q30a_11", Q30a_11));
+                    this.ReportViewer.LocalReport.SetParameters(ReportParameters);
+                    ReportParameters.Add(new ReportParameter("Q30a_12dt", Q30a_12dt));
+                    this.ReportViewer.LocalReport.SetParameters(ReportParameters);
+                    ReportParameters.Add(new ReportParameter("Q30a_12", Q30a_12));
+                    this.ReportViewer.LocalReport.SetParameters(ReportParameters);
+                    ReportParameters.Add(new ReportParameter("Q30a_13dt", Q30a_13dt));
+                    this.ReportViewer.LocalReport.SetParameters(ReportParameters);
+                    ReportParameters.Add(new ReportParameter("Q30a_13", Q30a_13));
+                    this.ReportViewer.LocalReport.SetParameters(ReportParameters);
+                    ReportParameters.Add(new ReportParameter("Q30a_14dt", Q30a_14dt));
+                    this.ReportViewer.LocalReport.SetParameters(ReportParameters);
+                    ReportParameters.Add(new ReportParameter("Q30a_14", Q30a_14));
+                    this.ReportViewer.LocalReport.SetParameters(ReportParameters);
+                    ReportParameters.Add(new ReportParameter("Q30a_15dt", Q30a_15dt));
+                    this.ReportViewer.LocalReport.SetParameters(ReportParameters);
+                    ReportParameters.Add(new ReportParameter("Q30a_15", Q30a_15));
+                    this.ReportViewer.LocalReport.SetParameters(ReportParameters);
+
+                    
+                    
+                    
+                    
+                    
+                    
                     ReportParameters.Add(new ReportParameter("Q30b_1dt", Q30b_1dt));
                     this.ReportViewer.LocalReport.SetParameters(ReportParameters);
                     ReportParameters.Add(new ReportParameter("Q30b_1", Q30b_1));
@@ -495,6 +552,32 @@ namespace ComplianceMaamtaLW
                     this.ReportViewer.LocalReport.SetParameters(ReportParameters);
                     ReportParameters.Add(new ReportParameter("Q30b_10", Q30b_10));
                     this.ReportViewer.LocalReport.SetParameters(ReportParameters);
+
+                    
+                    ReportParameters.Add(new ReportParameter("Q30b_11dt", Q30b_11dt));
+                    this.ReportViewer.LocalReport.SetParameters(ReportParameters);
+                    ReportParameters.Add(new ReportParameter("Q30b_11", Q30b_11));
+                    this.ReportViewer.LocalReport.SetParameters(ReportParameters);
+                    ReportParameters.Add(new ReportParameter("Q30b_12dt", Q30b_12dt));
+                    this.ReportViewer.LocalReport.SetParameters(ReportParameters);
+                    ReportParameters.Add(new ReportParameter("Q30b_12", Q30b_12));
+                    this.ReportViewer.LocalReport.SetParameters(ReportParameters);
+                    ReportParameters.Add(new ReportParameter("Q30b_13dt", Q30b_13dt));
+                    this.ReportViewer.LocalReport.SetParameters(ReportParameters);
+                    ReportParameters.Add(new ReportParameter("Q30b_13", Q30b_13));
+                    this.ReportViewer.LocalReport.SetParameters(ReportParameters);
+                    ReportParameters.Add(new ReportParameter("Q30b_14dt", Q30b_14dt));
+                    this.ReportViewer.LocalReport.SetParameters(ReportParameters);
+                    ReportParameters.Add(new ReportParameter("Q30b_14", Q30b_14));
+                    this.ReportViewer.LocalReport.SetParameters(ReportParameters);
+                    ReportParameters.Add(new ReportParameter("Q30b_15dt", Q30b_15dt));
+                    this.ReportViewer.LocalReport.SetParameters(ReportParameters);
+                    ReportParameters.Add(new ReportParameter("Q30b_15", Q30b_15));
+                    this.ReportViewer.LocalReport.SetParameters(ReportParameters);
+
+
+
+
 
                     if (Q31 == "1") Q31 = "At home";
                     else if (Q31 == "2") Q31 = "At health care centre/clinic/hospital";

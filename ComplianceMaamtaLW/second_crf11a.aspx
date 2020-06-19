@@ -221,6 +221,7 @@
                         <asp:BoundField DataField="dssid" HeaderText="DSSID" />
                         <asp:BoundField DataField="woman_nm" HeaderText="Woman Name" />
                         <asp:BoundField DataField="husband_nm" HeaderText="Husband Name" />
+                        <asp:BoundField DataField="dob" HeaderText="Date of Birth" />
                         <asp:TemplateField HeaderText="">
                             <ItemTemplate>
                                 <asp:LinkButton ID="Link_id" OnClick="Link_OpenForm" Text='Open Form' runat="server" ToolTip="Add Physician Form" CommandArgument='<%#Eval("assis_id")+","+ Eval("study_id")+","+ Eval("rand_id")+","+ Eval("dssid")+","+ Eval("woman_nm")+","+ Eval("husband_nm")+","+ Eval("dob")+","+ Eval("site")+","+ Eval("para")+","+ Eval("block")+","+ Eval("struct")+","+ Eval("HH")+","+ Eval("wm_no")%>'></asp:LinkButton>

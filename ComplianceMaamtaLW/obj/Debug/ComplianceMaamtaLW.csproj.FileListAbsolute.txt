@@ -33,3 +33,4 @@ C:\Users\Lenovoi\Documents\Visual Studio 2012\Projects\ComplianceMaamtaLW\Compli
 C:\Users\Lenovoi\Documents\Visual Studio 2012\Projects\ComplianceMaamtaLW\ComplianceMaamtaLW\obj\Debug\RdlCompile.compiled
 C:\Users\Lenovoi\Documents\Visual Studio 2012\Projects\ComplianceMaamtaLW\ComplianceMaamtaLW\obj\Debug\ComplianceMaamtaLW.dll
 C:\Users\Lenovoi\Documents\Visual Studio 2012\Projects\ComplianceMaamtaLW\ComplianceMaamtaLW\obj\Debug\ComplianceMaamtaLW.pdb
+C:\Users\Lenovoi\Documents\Visual Studio 2012\Projects\ComplianceMaamtaLW\ComplianceMaamtaLW\obj\Debug\ComplianceMaamtaLW.csprojResolveAssemblyReference.cache
