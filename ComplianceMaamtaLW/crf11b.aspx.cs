@@ -43,7 +43,9 @@ namespace ComplianceMaamtaLW
 
         protected void next_Click(object sender, EventArgs e)
         {
+            deleteQ32Records();
             countQ32Records();
+
             SqlConnection cn = new SqlConnection(ConDataBase);
             cn.Open();
             try
@@ -76,7 +78,7 @@ namespace ComplianceMaamtaLW
 
         protected void add_Click(object sender, EventArgs e)
         {
-            countQ32Records();
+            countQ32Records();          
 
             SqlConnection cn = new SqlConnection(ConDataBase);
             cn.Open();
@@ -116,6 +118,23 @@ namespace ComplianceMaamtaLW
 
 
 
+        public void deleteQ32Records()
+        {
+            SqlConnection con = new SqlConnection(ConDataBase);
+            con.Open();
+            try
+            {
+                if (txtq31.Text != "1")
+                {
+                    SqlCommand cmd = new SqlCommand("delete from crf11_q32 where crf11_id='" + Request.QueryString["FormID"] + "'", con);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
 
 
 

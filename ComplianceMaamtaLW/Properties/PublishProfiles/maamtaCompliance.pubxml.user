@@ -279,10 +279,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/29/2017 13:40:14</publishTime>
     </File>
     <File Include="bin/ComplianceMaamtaLW.dll">
-      <publishTime>05/16/2020 14:28:35</publishTime>
+      <publishTime>07/03/2020 11:26:56</publishTime>
     </File>
     <File Include="bin/ComplianceMaamtaLW.pdb">
-      <publishTime>05/16/2020 14:28:35</publishTime>
+      <publishTime>07/03/2020 11:26:56</publishTime>
     </File>
     <File Include="bin/MySql.Data.Entity.dll">
       <publishTime>04/18/2018 22:09:16</publishTime>
@@ -609,7 +609,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/27/2020 11:50:52</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>05/16/2020 14:28:45</publishTime>
+      <publishTime>07/03/2020 11:27:20</publishTime>
     </File>
   </ItemGroup>
 </Project>

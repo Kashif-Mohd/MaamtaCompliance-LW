@@ -38,6 +38,7 @@ namespace ComplianceMaamtaLW
 
         protected void submit_Click(object sender, EventArgs e)
         {
+            deleteQ70Records();
             countQ70Records();
             SqlConnection cn = new SqlConnection(ConDataBase);
             cn.Open();
@@ -101,6 +102,31 @@ namespace ComplianceMaamtaLW
                 showalert(ex.Message);
             }
         }
+
+
+
+
+
+
+        public void deleteQ70Records()
+        {
+            SqlConnection con = new SqlConnection(ConDataBase);
+            con.Open();
+            try
+            {
+                if (txtq69.Text != "1")
+                {
+                    SqlCommand cmd = new SqlCommand("delete from crf11_q70 where crf11_id='" + Request.QueryString["FormID"] + "'", con);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+
 
 
         public void countQ70Records()
